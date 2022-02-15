@@ -1,0 +1,11 @@
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\bin\Debug\Factorial.exe.config
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\bin\Debug\Factorial.exe
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\bin\Debug\Factorial.pdb
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.csproj.AssemblyReference.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.csproj.SuggestedBindingRedirects.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.Form1.resources
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.Properties.Resources.resources
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.csproj.GenerateResource.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.csproj.CoreCompileInputs.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.exe
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\Factorial\Factorial\obj\Debug\Factorial.pdb
