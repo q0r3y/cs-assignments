@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "58fb1fb7-3c26-47dc-9738-f1be0cac6533": {
+      "ProjectGuid": "58fb1fb7-3c26-47dc-9738-f1be0cac6533",
+      "DisplayName": "CalculateLetterGrade",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

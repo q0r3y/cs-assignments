@@ -1,0 +1,16 @@
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.exe
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.deps.json
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.runtimeconfig.json
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.runtimeconfig.dev.json
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.dll
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\bin\Debug\netcoreapp3.1\CalculateLetterGrade.pdb
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.csproj.AssemblyReference.cache
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.frmCalculateGrade.resources
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.csproj.GenerateResource.cache
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.AssemblyInfoInputs.cache
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.AssemblyInfo.cs
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.csproj.CoreCompileInputs.cache
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.dll
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.pdb
+C:\Users\hahnc\source\repos\Chapter 03\CalculateLetterGrade\CalculateLetterGrade\obj\Debug\netcoreapp3.1\CalculateLetterGrade.genruntimeconfig.cache

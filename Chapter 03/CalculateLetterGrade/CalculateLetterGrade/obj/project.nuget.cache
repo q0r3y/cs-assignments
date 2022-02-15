@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pn7uaxa/Vd156VLt/woP4pR/pxJ1OmsS9YPuJDLaKM5dF06t19t234hrJDMpYcnr5LUA9ih45RvyZo12y5J94w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hahnc\\source\\repos\\Chapter 03\\CalculateLetterGrade\\CalculateLetterGrade\\CalculateLetterGrade.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hahnc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\hahnc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\hahnc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\hahnc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
