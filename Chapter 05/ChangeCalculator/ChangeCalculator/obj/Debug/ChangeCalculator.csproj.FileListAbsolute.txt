@@ -1,0 +1,11 @@
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\bin\Debug\ChangeCalculator.exe.config
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\bin\Debug\ChangeCalculator.exe
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\bin\Debug\ChangeCalculator.pdb
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.csproj.AssemblyReference.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.Form1.resources
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.Properties.Resources.resources
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.csproj.GenerateResource.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.csproj.CoreCompileInputs.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.exe
+C:\Users\hahnc\source\repos\CIS106\Chapter 05\ChangeCalculator\ChangeCalculator\obj\Debug\ChangeCalculator.pdb

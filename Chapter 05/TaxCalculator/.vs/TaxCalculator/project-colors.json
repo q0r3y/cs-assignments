@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9f120872-e715-423d-a1e1-0bb552ded0a6": {
+      "ProjectGuid": "9f120872-e715-423d-a1e1-0bb552ded0a6",
+      "DisplayName": "TaxCalculator",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
