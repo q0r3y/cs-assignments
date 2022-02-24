@@ -1,0 +1,16 @@
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.exe
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.deps.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.runtimeconfig.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.runtimeconfig.dev.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.dll
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.pdb
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.frmFutureValue.resources
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.AssemblyInfo.cs
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.dll
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.pdb
+C:\Users\admin\source\repos\CIS106\Chapter 06\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.genruntimeconfig.cache

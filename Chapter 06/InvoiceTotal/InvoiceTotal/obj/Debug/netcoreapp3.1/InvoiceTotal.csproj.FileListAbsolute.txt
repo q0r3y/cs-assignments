@@ -1,0 +1,16 @@
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.exe
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.deps.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.runtimeconfig.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.runtimeconfig.dev.json
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.dll
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.pdb
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.frmInvoiceTotal.resources
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.AssemblyInfo.cs
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.dll
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.pdb
+C:\Users\admin\source\repos\CIS106\Chapter 06\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.genruntimeconfig.cache

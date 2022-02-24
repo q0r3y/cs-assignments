@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "CroZpbuTbqpgJYMT5lBn7n2FRO2nMN92u+5eyV6UhbynrDKPeDSgS8fz8pHXvRv5CiVuaqYLyRwONL3sG0sohA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\CIS106\\Chapter 06\\FutureValue\\FutureValue\\FutureValue.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
