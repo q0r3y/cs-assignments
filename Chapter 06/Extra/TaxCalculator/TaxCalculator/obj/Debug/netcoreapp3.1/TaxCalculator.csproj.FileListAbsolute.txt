@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.exe
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.dll
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\bin\Debug\netcoreapp3.1\TaxCalculator.pdb
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.dll
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.pdb
+C:\Users\user\source\repos\CIS106\Chapter 06\TaxCalculator\TaxCalculator\obj\Debug\netcoreapp3.1\TaxCalculator.genruntimeconfig.cache
