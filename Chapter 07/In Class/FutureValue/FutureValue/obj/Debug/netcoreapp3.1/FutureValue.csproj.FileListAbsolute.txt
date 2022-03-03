@@ -1,0 +1,16 @@
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.exe
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.deps.json
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.runtimeconfig.json
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.runtimeconfig.dev.json
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.dll
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\bin\Debug\netcoreapp3.1\FutureValue.pdb
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.AssemblyReference.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.frmFutureValue.resources
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.GenerateResource.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.AssemblyInfoInputs.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.AssemblyInfo.cs
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.csproj.CoreCompileInputs.cache
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.dll
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.pdb
+C:\Users\hahnc\source\repos\CIS106\Chapter 07\In Class\FutureValue\FutureValue\obj\Debug\netcoreapp3.1\FutureValue.genruntimeconfig.cache
