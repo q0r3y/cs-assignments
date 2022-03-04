@@ -54,10 +54,11 @@
             // txtOperand1
             // 
             this.txtOperand1.Location = new System.Drawing.Point(118, 23);
-            this.txtOperand1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOperand1.Margin = new System.Windows.Forms.Padding(2);
             this.txtOperand1.Name = "txtOperand1";
             this.txtOperand1.Size = new System.Drawing.Size(106, 23);
             this.txtOperand1.TabIndex = 0;
+            this.txtOperand1.Tag = "Operand1";
             this.txtOperand1.TextChanged += new System.EventHandler(this.ClearResult);
             // 
             // label2
@@ -74,10 +75,11 @@
             // txtOperator
             // 
             this.txtOperator.Location = new System.Drawing.Point(118, 52);
-            this.txtOperator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOperator.Margin = new System.Windows.Forms.Padding(2);
             this.txtOperator.Name = "txtOperator";
             this.txtOperator.Size = new System.Drawing.Size(31, 23);
             this.txtOperator.TabIndex = 1;
+            this.txtOperator.Tag = "Operator";
             this.txtOperator.TextChanged += new System.EventHandler(this.ClearResult);
             // 
             // label3
@@ -94,10 +96,11 @@
             // txtOperand2
             // 
             this.txtOperand2.Location = new System.Drawing.Point(118, 81);
-            this.txtOperand2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOperand2.Margin = new System.Windows.Forms.Padding(2);
             this.txtOperand2.Name = "txtOperand2";
             this.txtOperand2.Size = new System.Drawing.Size(106, 23);
             this.txtOperand2.TabIndex = 2;
+            this.txtOperand2.Tag = "Operand2";
             this.txtOperand2.TextChanged += new System.EventHandler(this.ClearResult);
             // 
             // label4
@@ -114,7 +117,7 @@
             // txtResult
             // 
             this.txtResult.Location = new System.Drawing.Point(118, 110);
-            this.txtResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtResult.Margin = new System.Windows.Forms.Padding(2);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(106, 23);
@@ -124,7 +127,7 @@
             // btnCalculate
             // 
             this.btnCalculate.Location = new System.Drawing.Point(46, 147);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(78, 25);
             this.btnCalculate.TabIndex = 3;
@@ -135,7 +138,7 @@
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(144, 147);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(78, 25);
             this.btnExit.TabIndex = 4;
@@ -160,7 +163,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOperand1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple Calculator";
