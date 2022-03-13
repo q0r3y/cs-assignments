@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Tf1znO6kccEMLsW5hx89o1M4PJVlujU4Dqs3MIfZCkcxPLve/Q4wyuOzq6F8VohANNUFVSbthpCjStyP+MbmLA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\CIS106\\Chapter 08\\extra\\ScoreCalculatorList\\ScoreCalculator\\ScoreCalculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

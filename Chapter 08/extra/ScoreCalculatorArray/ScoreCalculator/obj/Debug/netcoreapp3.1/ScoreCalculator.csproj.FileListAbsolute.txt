@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.exe
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.dll
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\bin\Debug\netcoreapp3.1\ScoreCalculator.pdb
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.dll
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.pdb
+C:\Users\user\source\repos\CIS106\Chapter 08\extra\ScoreCalculatorArray\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.genruntimeconfig.cache
