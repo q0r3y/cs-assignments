@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.exe
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.dll
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\bin\Debug\netcoreapp3.1\DateHandling.pdb
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.dll
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.pdb
+C:\Users\user\source\repos\CIS106\Chapter 09\DateHandling\DateHandling\obj\Debug\netcoreapp3.1\DateHandling.genruntimeconfig.cache

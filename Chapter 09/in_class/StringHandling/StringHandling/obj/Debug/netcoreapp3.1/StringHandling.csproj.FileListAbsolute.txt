@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.exe
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.dll
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\bin\Debug\netcoreapp3.1\StringHandling.pdb
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.dll
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.pdb
+C:\Users\user\source\repos\CIS106\Chapter 09\StringHandling\StringHandling\obj\Debug\netcoreapp3.1\StringHandling.genruntimeconfig.cache

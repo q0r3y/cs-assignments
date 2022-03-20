@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b72f225c-8734-4275-972a-de81d9846d75": {
+      "ProjectGuid": "b72f225c-8734-4275-972a-de81d9846d75",
+      "DisplayName": "Reservations",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

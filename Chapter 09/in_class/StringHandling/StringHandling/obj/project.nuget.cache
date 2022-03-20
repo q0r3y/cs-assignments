@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "rRc9MUFIPhzhTojAgsc9hvFdiftKQzNgbnU7/RxMk3J8mpjbQdd+fC20ym77ecMSveRcJ9p6uElUMEHJyRiHIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\CIS106\\Chapter 09\\StringHandling\\StringHandling\\StringHandling.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
