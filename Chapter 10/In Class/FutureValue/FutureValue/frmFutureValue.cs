@@ -23,19 +23,19 @@ namespace FutureValue
             {
                 if (IsValidData())
                 {
-                    decimal monthlyInvestment =
-                        Convert.ToDecimal(txtMonthlyInvestment.Text);
-                    decimal yearlyInterestRate =
-                        Convert.ToDecimal(txtInterestRate.Text);
-                    int years =
-                        Convert.ToInt32(txtYears.Text);
-
-                    int months = years * 12;
+                    int years = Convert.ToInt32(cboNumOfYears.Text);
+                    decimal monthlyInvestment = Convert.ToDecimal(txtMonthlyInvestment.Text);
+                    decimal yearlyInterestRate = Convert.ToDecimal(txtInterestRate.Text);
                     decimal monthlyInterestRate = yearlyInterestRate / 12 / 100;
-                    decimal futureValue = CalculateFutureValue(
-                        monthlyInvestment, monthlyInterestRate, months);
 
-                    txtFutureValue.Text = futureValue.ToString("c");
+                    for (int i = 1; i <= years; i++)
+                    {
+                        int months = i * 12;
+                        decimal futureValue = CalculateFutureValue(
+                            monthlyInvestment, monthlyInterestRate, months);
+                        lstFutureValue.Items.Add($"Year {i}: {futureValue.ToString("C")}");
+                    }
+
                     txtMonthlyInvestment.Focus();
                 }
             }
@@ -59,10 +59,6 @@ namespace FutureValue
             // Validate the Yearly Interest Rate text box
             errorMessage += IsDecimal(txtInterestRate.Text, txtInterestRate.Tag.ToString());
             errorMessage += IsWithinRange(txtInterestRate.Text, txtInterestRate.Tag.ToString(), 1, 20);
-
-            // Validate the Number of Years text box
-            errorMessage += IsInt32(txtYears.Text, txtYears.Tag.ToString());
-            errorMessage += IsWithinRange(txtYears.Text, txtYears.Tag.ToString(), 1, 40);
 
             if (errorMessage != "")
             {
@@ -132,5 +128,12 @@ namespace FutureValue
             this.Close();
         }
 
+        private void frmFutureValue_Load(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 20; i++)
+                cboNumOfYears.Items.Add(i);
+
+            cboNumOfYears.SelectedIndex = 2;
+        }
     }
 }
