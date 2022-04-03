@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.exe
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\bin\Debug\netcoreapp3.1\LengthConversions.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\LengthConversions\LengthConversions\obj\Debug\netcoreapp3.1\LengthConversions.genruntimeconfig.cache

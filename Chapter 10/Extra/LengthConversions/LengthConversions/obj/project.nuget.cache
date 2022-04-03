@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "7yisfvq4SJvhFQ7a2YsK4wEVtd4SbyWTueE++Sx53ObLGhT7Zhzj3GZpSQbpIk1diGNVYFftQH+X3Fv0v8DnLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\CIS106\\Chapter 10\\Extra\\LengthConversions\\LengthConversions\\LengthConversions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

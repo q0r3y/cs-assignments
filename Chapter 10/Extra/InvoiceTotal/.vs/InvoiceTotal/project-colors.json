@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1bd48477-0f83-4fba-8d85-eaf77d8d34f7": {
+      "ProjectGuid": "1bd48477-0f83-4fba-8d85-eaf77d8d34f7",
+      "DisplayName": "InvoiceTotal",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
