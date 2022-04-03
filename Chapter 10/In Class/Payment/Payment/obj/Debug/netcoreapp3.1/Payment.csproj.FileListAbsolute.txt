@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.frmPayment.resources
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.exe
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\bin\Debug\netcoreapp3.1\Payment.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.frmCustomer.resources
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\In Class\Payment\Payment\obj\Debug\netcoreapp3.1\Payment.genruntimeconfig.cache
