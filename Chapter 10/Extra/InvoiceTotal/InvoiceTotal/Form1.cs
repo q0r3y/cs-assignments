@@ -17,7 +17,7 @@ namespace InvoiceTotal
             InitializeComponent();
         }
 
-        const decimal SalesTaxPct = 7.75m;
+        decimal SalesTaxPct = 7.75m;
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -98,6 +98,18 @@ namespace InvoiceTotal
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnChangeTax_Click(object sender, EventArgs e)
+        {
+            Form salesTaxForm = new frmSalesTax();
+            DialogResult result = salesTaxForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                SalesTaxPct = Convert.ToDecimal(salesTaxForm.Tag.ToString());
+                lblTax.Text = $"Tax ({SalesTaxPct.ToString("n")}%):";
+            }
         }
     }
 }

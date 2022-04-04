@@ -61,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(116, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sales tax percentage:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtSalesTaxPct
             // 

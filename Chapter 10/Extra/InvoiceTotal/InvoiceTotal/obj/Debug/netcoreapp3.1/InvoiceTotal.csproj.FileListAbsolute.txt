@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.exe
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.deps.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.runtimeconfig.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.runtimeconfig.dev.json
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\bin\Debug\netcoreapp3.1\InvoiceTotal.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.Form1.resources
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.frmSalesTax.resources
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.AssemblyInfo.cs
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.dll
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.pdb
+C:\Users\user\source\repos\CIS106\Chapter 10\Extra\InvoiceTotal\InvoiceTotal\obj\Debug\netcoreapp3.1\InvoiceTotal.genruntimeconfig.cache

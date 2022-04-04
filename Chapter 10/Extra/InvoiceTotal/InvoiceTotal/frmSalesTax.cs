@@ -17,11 +17,61 @@ namespace InvoiceTotal
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            decimal salesTaxPct = Convert.ToDecimal(txtSalesTaxPct.Text);
+            if (IsValidData())
+            {
+                decimal salesTaxPct = Convert.ToDecimal(txtSalesTaxPct.Text);
 
-            this.Tag = salesTaxPct;
+                this.Tag = salesTaxPct;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
 
+        public bool IsValidData()
+        {
+            return
+                IsPresent(txtSalesTaxPct, "Sales Tax Percentage") &&
+                IsDecimal(txtSalesTaxPct, "Sales Tax Percentage") &&
+                IsWithinRange(txtSalesTaxPct, "Sales Tax Percentage", 0, 10);
+        }
 
+        public bool IsPresent(TextBox textBox, string name)
+        {
+            if (textBox.Text == "")
+            {
+                MessageBox.Show(name + " is a required field.", "Entry Error");
+                textBox.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsDecimal(TextBox textBox, string name)
+        {
+            decimal number = 0m;
+            if (Decimal.TryParse(textBox.Text, out number))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(name + " must be a decimal number.", "Entry Error");
+                textBox.Focus();
+                return false;
+            }
+        }
+
+        public bool IsWithinRange(TextBox textBox, string name,
+            decimal min, decimal max)
+        {
+            decimal number = Convert.ToDecimal(textBox.Text);
+            if (number < min || number > max)
+            {
+                MessageBox.Show(name + " must be between " + min +
+                    " and " + max + ".", "Entry Error");
+                textBox.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }
