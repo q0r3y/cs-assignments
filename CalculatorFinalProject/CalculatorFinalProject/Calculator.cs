@@ -1,136 +1,121 @@
-using System.Data;
-
 namespace CalculatorFinalProject
 {
     public partial class Calculator : Form
     {
+        private string mode = "decimal";
+        private bool errorState = false;
+        private string lastOperation = "";
+        private List<Control> buttons = new List<Control>();
+        
         public Calculator()
         {
             InitializeComponent();
+            addButtonsToList();
         }
 
-        private void Calculator_Load(object sender, EventArgs e)
+        private void addButtonsToList()
         {
-            rdoDecimal.Checked = true;
-            
+            foreach (Button button in pnlButtons.Controls)
+            {
+                buttons.Add(button);
+            }
         }
 
-        private void btnEquals_Click(object sender, EventArgs e)
+        private void setErrorState(string msg)
         {
-            string equation = txtResult.Text;
-            string ?result = new DataTable().Compute(equation, null).ToString();
-            txtResult.Text = result;
-            txtResult.Focus();
-            txtResult.SelectionStart = txtResult.Text.Length;
+            string[] err = msg.Split(":");
+            errorState = true;
+            txtResult.Text = err[0];
+            txtDisplayBox.Text = err[1];
+            txtResult.Enabled = false;
+            foreach (Button button in buttons)
+            {
+                if (button.Name != "btnClear" && 
+                    button.Name != "btnBack")
+                    button.Enabled = false;
+            }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void clearErrorState()
         {
-            clearResultBox();
+            errorState = false;
+            txtResult.Enabled = true;
+            foreach (Button button in buttons)
+            {
+                button.Enabled = true;
+            }
         }
 
-        private void clearResultBox()
+        private void txtResult_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtResult.Text = "";
-            txtResult.Focus();
+            if (!isValidKey(e))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (mode == "decimal")
+                {
+                    txtDisplayBox.Text += e.KeyChar.ToString();
+                }
+                else if (mode == "binary")
+                {
+                    txtDisplayBox.Text += e.KeyChar.ToString();
+                }
+                else if (mode == "hex")
+                {
+                    txtDisplayBox.Text += e.KeyChar.ToString();
+                }
+            }
         }
 
-        private void btn1_Click(object sender, EventArgs e)
+        private bool isValidKey(KeyPressEventArgs e)
         {
-            txtResult.Text += "1";
+            bool validEntry = false;
+            char[] validKeys =
+            {
+                '1','2','3','4','5','6','7','8','9','0',
+                '/','*','+','-','.','(',')'
+            };
+
+            foreach (char c in validKeys)
+            {
+                if (c == (e.KeyChar))
+                {
+                    validEntry = true;
+                    break;
+                }
+            }
+            return validEntry;
         }
 
-        private void btn2_Click(object sender, EventArgs e)
+        private void clearTextBoxes()
         {
-            txtResult.Text += "2";
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "3";
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "4";
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "5";
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "6";
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "7";
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "8";
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "9";
-        }
-
-        private void btn0_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "0";
-        }
-
-        private void btnDecimal_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += ".";
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "+";
-        }
-
-        private void btnSubtract_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "-";
-        }
-
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "*";
-        }
-
-        private void btnDivide_Click(object sender, EventArgs e)
-        {
-            txtResult.Text += "/";
+            txtResult.Clear();
+            txtDisplayBox.Clear();
         }
 
         private void rdoDecimal_CheckedChanged(object sender, EventArgs e)
         {
-            clearResultBox();
+            //clearTextBoxes();
+            mode = "decimal";
         }
 
         private void rdoBinary_CheckedChanged(object sender, EventArgs e)
         {
-            clearResultBox();
+            //clearTextBoxes();
+            mode = "binary";
         }
 
         private void rdoHex_CheckedChanged(object sender, EventArgs e)
         {
-            clearResultBox();
+            //clearTextBoxes();
+            mode = "hex";
         }
 
-        private void txtResult_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyData == Keys.A)
-            {
-                e.Handled = true;
-            }
-        }
+        private void Calculator_Load(object sender, EventArgs e)
+        => rdoDecimal.Checked = true;
+        private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
+        => txtResult.Focus();
     }
 }

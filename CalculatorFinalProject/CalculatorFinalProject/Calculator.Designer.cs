@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtResult = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -55,46 +55,47 @@
             this.rdoHex = new System.Windows.Forms.RadioButton();
             this.rdoBinary = new System.Windows.Forms.RadioButton();
             this.rdoDecimal = new System.Windows.Forms.RadioButton();
-            this.panel1.SuspendLayout();
+            this.txtDisplayBox = new System.Windows.Forms.TextBox();
+            this.pnlButtons.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtResult
             // 
             this.txtResult.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResult.Location = new System.Drawing.Point(12, 54);
+            this.txtResult.Location = new System.Drawing.Point(12, 88);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(228, 39);
             this.txtResult.TabIndex = 0;
-            this.txtResult.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtResult_PreviewKeyDown);
+            this.txtResult.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResult_KeyPress);
             // 
-            // panel1
+            // pnlButtons
             // 
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.btn9);
-            this.panel1.Controls.Add(this.btn6);
-            this.panel1.Controls.Add(this.btnSqrt);
-            this.panel1.Controls.Add(this.btnPosNeg);
-            this.panel1.Controls.Add(this.btn3);
-            this.panel1.Controls.Add(this.button20);
-            this.panel1.Controls.Add(this.btn2);
-            this.panel1.Controls.Add(this.btn7);
-            this.panel1.Controls.Add(this.btnDecimal);
-            this.panel1.Controls.Add(this.btnEquals);
-            this.panel1.Controls.Add(this.btn5);
-            this.panel1.Controls.Add(this.btn4);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnDivide);
-            this.panel1.Controls.Add(this.btn8);
-            this.panel1.Controls.Add(this.btn1);
-            this.panel1.Controls.Add(this.btnSubtract);
-            this.panel1.Controls.Add(this.btnMultiply);
-            this.panel1.Controls.Add(this.btn0);
-            this.panel1.Location = new System.Drawing.Point(12, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 230);
-            this.panel1.TabIndex = 1;
+            this.pnlButtons.Controls.Add(this.btnClear);
+            this.pnlButtons.Controls.Add(this.btnBack);
+            this.pnlButtons.Controls.Add(this.btn9);
+            this.pnlButtons.Controls.Add(this.btn6);
+            this.pnlButtons.Controls.Add(this.btnSqrt);
+            this.pnlButtons.Controls.Add(this.btnPosNeg);
+            this.pnlButtons.Controls.Add(this.btn3);
+            this.pnlButtons.Controls.Add(this.button20);
+            this.pnlButtons.Controls.Add(this.btn2);
+            this.pnlButtons.Controls.Add(this.btn7);
+            this.pnlButtons.Controls.Add(this.btnDecimal);
+            this.pnlButtons.Controls.Add(this.btnEquals);
+            this.pnlButtons.Controls.Add(this.btn5);
+            this.pnlButtons.Controls.Add(this.btn4);
+            this.pnlButtons.Controls.Add(this.btnAdd);
+            this.pnlButtons.Controls.Add(this.btnDivide);
+            this.pnlButtons.Controls.Add(this.btn8);
+            this.pnlButtons.Controls.Add(this.btn1);
+            this.pnlButtons.Controls.Add(this.btnSubtract);
+            this.pnlButtons.Controls.Add(this.btnMultiply);
+            this.pnlButtons.Controls.Add(this.btn0);
+            this.pnlButtons.Location = new System.Drawing.Point(12, 133);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(228, 230);
+            this.pnlButtons.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -116,6 +117,7 @@
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btn9
             // 
@@ -371,14 +373,24 @@
             this.rdoDecimal.UseVisualStyleBackColor = true;
             this.rdoDecimal.CheckedChanged += new System.EventHandler(this.rdoDecimal_CheckedChanged);
             // 
+            // txtDisplayBox
+            // 
+            this.txtDisplayBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDisplayBox.Location = new System.Drawing.Point(12, 55);
+            this.txtDisplayBox.Name = "txtDisplayBox";
+            this.txtDisplayBox.ReadOnly = true;
+            this.txtDisplayBox.Size = new System.Drawing.Size(228, 27);
+            this.txtDisplayBox.TabIndex = 3;
+            // 
             // Calculator
             // 
             this.AcceptButton = this.btnEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 338);
+            this.ClientSize = new System.Drawing.Size(252, 375);
+            this.Controls.Add(this.txtDisplayBox);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.txtResult);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -387,7 +399,8 @@
             this.Text = "Calculator";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Calculator_Load);
-            this.panel1.ResumeLayout(false);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Calculator_KeyPress);
+            this.pnlButtons.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -398,7 +411,7 @@
         #endregion
 
         private TextBox txtResult;
-        private Panel panel1;
+        private Panel pnlButtons;
         private Button btnDivide;
         private Button btnMultiply;
         private Button btnSubtract;
@@ -424,5 +437,6 @@
         private RadioButton rdoHex;
         private RadioButton rdoBinary;
         private RadioButton rdoDecimal;
+        private TextBox txtDisplayBox;
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {}
+    "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {
+    "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
         "projectName": "CalculatorFinalProject",
-        "projectPath": "C:\\Users\\user\\source\\repos\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\CalculatorFinalProject\\CalculatorFinalProject\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
