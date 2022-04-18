@@ -91,18 +91,21 @@ namespace CalculatorFinalProject
         private void rdoDecimal_CheckedChanged(object sender, EventArgs e)
         {
             //clearTextBoxes();
+            // Convert Result box and display box to decimal
             mode = "decimal";
         }
 
         private void rdoBinary_CheckedChanged(object sender, EventArgs e)
         {
             //clearTextBoxes();
+            // Convert Result box and display box to binary
             mode = "binary";
         }
 
         private void rdoHex_CheckedChanged(object sender, EventArgs e)
         {
             //clearTextBoxes();
+            // Convert Result box and display box to hex
             mode = "hex";
         }
 

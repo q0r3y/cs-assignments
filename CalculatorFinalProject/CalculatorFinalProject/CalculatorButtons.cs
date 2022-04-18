@@ -61,13 +61,12 @@ namespace CalculatorFinalProject
         private void btnBack_Click(object sender, EventArgs e)
         {
             string resultText = txtResult.Text;
-            string displayText = txtDisplayBox.Text;
+            txtDisplayBox.Text = "";
 
             if (resultText.Length > 0)
                 txtResult.Text = resultText.Remove(resultText.Length - 1, 1);
 
-            if (displayText.Length > 0)
-                txtDisplayBox.Text = displayText.Remove(displayText.Length - 1, 1);
+            txtDisplayBox.Text = txtResult.Text;
         }
 
         private void btnUndo_Click(object sender, EventArgs e)
