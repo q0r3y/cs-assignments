@@ -4,34 +4,25 @@ namespace CalculatorFinalProject
     {
         private string mode = "decimal";
         private bool errorState = false;
+        private string lastResult = "";
         private string lastOperation = "";
-        private List<Control> buttons = new List<Control>();
         
         public Calculator()
         {
             InitializeComponent();
-            addButtonsToList();
-        }
-
-        private void addButtonsToList()
-        {
-            foreach (Button button in pnlButtons.Controls)
-            {
-                buttons.Add(button);
-            }
         }
 
         private void setErrorState(string msg)
         {
-            string[] err = msg.Split(":");
             errorState = true;
-            txtResult.Text = err[0];
-            txtDisplayBox.Text = err[1];
+            txtDisplayBox.Text = msg;
             txtResult.Enabled = false;
-            foreach (Button button in buttons)
+            btnBack.Visible = false;
+            btnUndo.Visible = true;
+            foreach (Button button in pnlButtons.Controls)
             {
-                if (button.Name != "btnClear" && 
-                    button.Name != "btnBack")
+                if (button.Name != "btnClear" &&
+                    button.Name != "btnUndo")
                     button.Enabled = false;
             }
         }
@@ -40,7 +31,9 @@ namespace CalculatorFinalProject
         {
             errorState = false;
             txtResult.Enabled = true;
-            foreach (Button button in buttons)
+            btnBack.Visible = true;
+            btnUndo.Visible = false;
+            foreach (Button button in pnlButtons.Controls)
             {
                 button.Enabled = true;
             }

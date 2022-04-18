@@ -11,12 +11,13 @@ namespace CalculatorFinalProject
     {
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            string? result = "0";
+            string result = "0";
             try
             {
                 string equation = txtResult.Text;
                 result = new DataTable().Compute(equation, null).ToString();
                 txtResult.Text = result;
+                lastResult = result;
                 lastOperation = txtDisplayBox.Text;
             }
             catch (Exception ex)
@@ -27,16 +28,31 @@ namespace CalculatorFinalProject
             buttonClicked("");
         }
 
-        private void buttonClicked(string button)
+        private void buttonClicked(string buttonText)
         {
-            txtResult.Text += button;
-            txtDisplayBox.Text += button;
+            if (mode == "decimal")
+            {
+                txtResult.Text += buttonText;
+                txtDisplayBox.Text += buttonText;
+            }
+            else if (mode == "binary")
+            {
+                txtResult.Text += buttonText;
+                txtDisplayBox.Text += buttonText;
+            }
+            else if (mode == "hex")
+            {
+                txtResult.Text += buttonText;
+                txtDisplayBox.Text += buttonText;
+            }
             txtResult.Focus();
             txtResult.SelectionStart = txtResult.Text.Length;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            lastResult = "";
+            lastOperation = "";
             if (errorState)
                 clearErrorState();
             clearTextBoxes();
@@ -52,6 +68,13 @@ namespace CalculatorFinalProject
 
             if (displayText.Length > 0)
                 txtDisplayBox.Text = displayText.Remove(displayText.Length - 1, 1);
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            txtDisplayBox.Text = lastOperation;
+            txtResult.Text = lastResult;
+            clearErrorState();
         }
 
         private void btn1_Click(object sender, EventArgs e) => buttonClicked("1");

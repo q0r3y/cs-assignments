@@ -30,6 +30,7 @@
         {
             this.txtResult = new System.Windows.Forms.TextBox();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnUndo = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@
             // 
             // pnlButtons
             // 
+            this.pnlButtons.Controls.Add(this.btnUndo);
             this.pnlButtons.Controls.Add(this.btnClear);
             this.pnlButtons.Controls.Add(this.btnBack);
             this.pnlButtons.Controls.Add(this.btn9);
@@ -96,6 +98,18 @@
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(228, 230);
             this.pnlButtons.TabIndex = 1;
+            // 
+            // btnUndo
+            // 
+            this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUndo.Location = new System.Drawing.Point(3, 3);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(86, 40);
+            this.btnUndo.TabIndex = 24;
+            this.btnUndo.Text = "Undo";
+            this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Visible = false;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnClear
             // 
@@ -438,5 +452,6 @@
         private RadioButton rdoBinary;
         private RadioButton rdoDecimal;
         private TextBox txtDisplayBox;
+        private Button btnUndo;
     }
 }
