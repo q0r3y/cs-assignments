@@ -4,9 +4,7 @@ namespace CalculatorFinalProject
     {
         private string mode = "decimal";
         private bool errorState = false;
-        private string lastResult = "";
-        private string lastOperation = "";
-        
+
         public Calculator()
         {
             InitializeComponent();
