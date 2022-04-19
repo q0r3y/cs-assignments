@@ -56,7 +56,7 @@
             this.rdoHex = new System.Windows.Forms.RadioButton();
             this.rdoBinary = new System.Windows.Forms.RadioButton();
             this.rdoDecimal = new System.Windows.Forms.RadioButton();
-            this.txtDisplayBox = new System.Windows.Forms.TextBox();
+            this.txtHistoryBox = new System.Windows.Forms.TextBox();
             this.pnlButtons.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -389,12 +389,12 @@
             // 
             // txtDisplayBox
             // 
-            this.txtDisplayBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDisplayBox.Location = new System.Drawing.Point(12, 55);
-            this.txtDisplayBox.Name = "txtDisplayBox";
-            this.txtDisplayBox.ReadOnly = true;
-            this.txtDisplayBox.Size = new System.Drawing.Size(228, 27);
-            this.txtDisplayBox.TabIndex = 3;
+            this.txtHistoryBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtHistoryBox.Location = new System.Drawing.Point(12, 55);
+            this.txtHistoryBox.Name = "txtDisplayBox";
+            this.txtHistoryBox.ReadOnly = true;
+            this.txtHistoryBox.Size = new System.Drawing.Size(228, 27);
+            this.txtHistoryBox.TabIndex = 3;
             // 
             // Calculator
             // 
@@ -402,7 +402,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(252, 375);
-            this.Controls.Add(this.txtDisplayBox);
+            this.Controls.Add(this.txtHistoryBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.txtResult);
@@ -451,7 +451,7 @@
         private RadioButton rdoHex;
         private RadioButton rdoBinary;
         private RadioButton rdoDecimal;
-        private TextBox txtDisplayBox;
+        private TextBox txtHistoryBox;
         private Button btnUndo;
     }
 }
