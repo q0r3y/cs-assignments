@@ -6,7 +6,7 @@ namespace CalculatorFinalProject {
         private bool errorState = false;
         private string lastResult = "";
         private string lastOperation = "";
-
+        private string lastNumber = "";
         public Calculator() {
             InitializeComponent();
         }
@@ -34,6 +34,7 @@ namespace CalculatorFinalProject {
             }
         }
 
+        // Need to fix decimal on bin and hex
         private void txtResult_KeyPress(object sender, KeyPressEventArgs e) {
             if (!isValidKey(e)) {
                 e.Handled = true;
@@ -43,11 +44,23 @@ namespace CalculatorFinalProject {
                     txtHistoryBox.Text += e.KeyChar.ToString();
                 }
                 else if (mode == "binary") {
-                    txtHistoryBox.Text += e.KeyChar.ToString();
+                    displayBinary(e.KeyChar.ToString());
+                    //txtHistoryBox.Text += e.KeyChar.ToString();
                 }
                 else if (mode == "hex") {
                     txtHistoryBox.Text += e.KeyChar.ToString();
                 }
+            }
+        }
+
+        private void displayBinary(string input) {
+            if (int.TryParse(input, out _)) {
+                int num = Convert.ToInt32(lastNumber + input);
+                txtHistoryBox.Text = Convert.ToString(num, 2);
+                lastNumber = num.ToString();
+            } else {
+                lastNumber = "";
+                txtHistoryBox.Text += input;
             }
         }
 
@@ -73,20 +86,23 @@ namespace CalculatorFinalProject {
         }
 
         private void rdoDecimal_CheckedChanged(object sender, EventArgs e) {
-            //clearTextBoxes();
+            clearTextBoxes();
             // Convert Result box and display box to decimal
+            btnDecimal.Enabled = true;
             mode = "decimal";
         }
 
         private void rdoBinary_CheckedChanged(object sender, EventArgs e) {
-            //clearTextBoxes();
+            clearTextBoxes();
             // Convert Result box and display box to binary
+            btnDecimal.Enabled = false;
             mode = "binary";
         }
 
         private void rdoHex_CheckedChanged(object sender, EventArgs e) {
-            //clearTextBoxes();
+            clearTextBoxes();
             // Convert Result box and display box to hex
+            btnDecimal.Enabled = false;
             mode = "hex";
         }
 
@@ -108,10 +124,7 @@ namespace CalculatorFinalProject {
             try {
                 string equation = txtResult.Text;
                 string result = new DataTable().Compute(equation, null).ToString();
-                if (mode == "decimal") {
-                    convertBases(result, 10);
-                }
-                else if (mode == "hex") {
+                if (mode == "hex") {
                     convertBases(result, 16);
                 }
                 else if (mode == "binary") {
@@ -130,17 +143,15 @@ namespace CalculatorFinalProject {
 
         private void handleButtonClick(string buttonText) {
             if (mode == "decimal") {
-                txtResult.Text += buttonText;
                 txtHistoryBox.Text += buttonText;
             }
             else if (mode == "binary") {
-                txtResult.Text += buttonText;
-                txtHistoryBox.Text += buttonText;
+                displayBinary(buttonText);
             }
             else if (mode == "hex") {
-                txtResult.Text += buttonText;
                 txtHistoryBox.Text += buttonText;
             }
+            txtResult.Text += buttonText;
             txtResult.Focus();
             txtResult.SelectionStart = txtResult.Text.Length;
         }

@@ -356,7 +356,7 @@
             this.rdoHex.AutoSize = true;
             this.rdoHex.Location = new System.Drawing.Point(176, 14);
             this.rdoHex.Name = "rdoHex";
-            this.rdoHex.Size = new System.Drawing.Size(45, 19);
+            this.rdoHex.Size = new System.Drawing.Size(46, 19);
             this.rdoHex.TabIndex = 2;
             this.rdoHex.TabStop = true;
             this.rdoHex.Text = "Hex";
@@ -387,11 +387,11 @@
             this.rdoDecimal.UseVisualStyleBackColor = true;
             this.rdoDecimal.CheckedChanged += new System.EventHandler(this.rdoDecimal_CheckedChanged);
             // 
-            // txtDisplayBox
+            // txtHistoryBox
             // 
             this.txtHistoryBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtHistoryBox.Location = new System.Drawing.Point(12, 55);
-            this.txtHistoryBox.Name = "txtDisplayBox";
+            this.txtHistoryBox.Name = "txtHistoryBox";
             this.txtHistoryBox.ReadOnly = true;
             this.txtHistoryBox.Size = new System.Drawing.Size(228, 27);
             this.txtHistoryBox.TabIndex = 3;
