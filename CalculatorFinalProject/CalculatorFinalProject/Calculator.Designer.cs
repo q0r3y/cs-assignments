@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtResult = new System.Windows.Forms.TextBox();
+            this.txtEntryBox = new System.Windows.Forms.TextBox();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnUndo = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -63,12 +63,12 @@
             // 
             // txtResult
             // 
-            this.txtResult.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResult.Location = new System.Drawing.Point(12, 88);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(228, 39);
-            this.txtResult.TabIndex = 0;
-            this.txtResult.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResult_KeyPress);
+            this.txtEntryBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEntryBox.Location = new System.Drawing.Point(12, 88);
+            this.txtEntryBox.Name = "txtResult";
+            this.txtEntryBox.Size = new System.Drawing.Size(228, 39);
+            this.txtEntryBox.TabIndex = 0;
+            this.txtEntryBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResult_KeyPress);
             // 
             // pnlButtons
             // 
@@ -405,7 +405,7 @@
             this.Controls.Add(this.txtHistoryBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlButtons);
-            this.Controls.Add(this.txtResult);
+            this.Controls.Add(this.txtEntryBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Calculator";
@@ -424,7 +424,7 @@
 
         #endregion
 
-        private TextBox txtResult;
+        private TextBox txtEntryBox;
         private Panel pnlButtons;
         private Button btnDivide;
         private Button btnMultiply;

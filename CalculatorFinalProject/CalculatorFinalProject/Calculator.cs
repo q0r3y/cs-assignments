@@ -2,19 +2,25 @@ using System.Data;
 
 namespace CalculatorFinalProject {
     public partial class Calculator : Form {
-        private string mode = "decimal";
+
         private bool errorState = false;
+        //public string mode = "decimal";
         private string lastResult = "";
         private string lastOperation = "";
         private string lastNumber = "";
+        CalcBox HistoryBox;
+        CalcBox EntryBox;
+
         public Calculator() {
             InitializeComponent();
+            HistoryBox = new CalcBox(ref txtHistoryBox);
+            EntryBox = new CalcBox(ref txtEntryBox);
         }
 
         private void setErrorState(string msg) {
             errorState = true;
-            txtHistoryBox.Text = msg;
-            txtResult.Enabled = false;
+            HistoryBox.Text = msg;
+            EntryBox.Box.Enabled = false;
             btnBack.Visible = false;
             btnUndo.Visible = true;
             foreach (Button button in pnlButtons.Controls) {
@@ -26,7 +32,7 @@ namespace CalculatorFinalProject {
 
         private void clearErrorState() {
             errorState = false;
-            txtResult.Enabled = true;
+            EntryBox.Box.Enabled = true;
             btnBack.Visible = true;
             btnUndo.Visible = false;
             foreach (Button button in pnlButtons.Controls) {
@@ -40,15 +46,15 @@ namespace CalculatorFinalProject {
                 e.Handled = true;
             }
             else {
-                if (mode == "decimal") {
-                    txtHistoryBox.Text += e.KeyChar.ToString();
+                if (EntryBox.Mode == "decimal") {
+                    HistoryBox.Text += e.KeyChar.ToString();
                 }
-                else if (mode == "binary") {
+                else if (EntryBox.Mode == "binary") {
                     displayBinary(e.KeyChar.ToString());
                     //txtHistoryBox.Text += e.KeyChar.ToString();
                 }
-                else if (mode == "hex") {
-                    txtHistoryBox.Text += e.KeyChar.ToString();
+                else if (EntryBox.Mode == "hex") {
+                    HistoryBox.Text += e.KeyChar.ToString();
                 }
             }
         }
@@ -56,11 +62,12 @@ namespace CalculatorFinalProject {
         private void displayBinary(string input) {
             if (int.TryParse(input, out _)) {
                 int num = Convert.ToInt32(lastNumber + input);
-                txtHistoryBox.Text = Convert.ToString(num, 2);
+                HistoryBox.Text = Convert.ToString(num, 2);
                 lastNumber = num.ToString();
-            } else {
+            }
+            else {
                 lastNumber = "";
-                txtHistoryBox.Text += input;
+                HistoryBox.Text += input;
             }
         }
 
@@ -81,40 +88,40 @@ namespace CalculatorFinalProject {
         }
 
         private void clearTextBoxes() {
-            txtResult.Clear();
-            txtHistoryBox.Clear();
+            EntryBox.Text = "";
+            HistoryBox.Text = "";
         }
 
         private void rdoDecimal_CheckedChanged(object sender, EventArgs e) {
             clearTextBoxes();
             // Convert Result box and display box to decimal
             btnDecimal.Enabled = true;
-            mode = "decimal";
+            EntryBox.Mode = "decimal";
         }
 
         private void rdoBinary_CheckedChanged(object sender, EventArgs e) {
             clearTextBoxes();
             // Convert Result box and display box to binary
             btnDecimal.Enabled = false;
-            mode = "binary";
+            EntryBox.Mode = "binary";
         }
 
         private void rdoHex_CheckedChanged(object sender, EventArgs e) {
             clearTextBoxes();
             // Convert Result box and display box to hex
             btnDecimal.Enabled = false;
-            mode = "hex";
+            EntryBox.Mode = "hex";
         }
 
         private string convertBases(string number, int toBase) {
             int fromBase = 10;
-            if (mode == "decimal") {
+            if (EntryBox.Mode == "decimal") {
                 fromBase = 10;
-            } 
-            else if (mode == "binary") {
+            }
+            else if (EntryBox.Mode == "binary") {
                 fromBase = 2;
             }
-            else if (mode == "hex") {
+            else if (EntryBox.Mode == "hex") {
                 fromBase = 16;
             }
             return Convert.ToString(Convert.ToInt32(number, fromBase), toBase);
@@ -122,17 +129,17 @@ namespace CalculatorFinalProject {
 
         private void btnEquals_Click(object sender, EventArgs e) {
             try {
-                string equation = txtResult.Text;
+                string equation = EntryBox.Text;
                 string result = new DataTable().Compute(equation, null).ToString();
-                if (mode == "hex") {
+                if (EntryBox.Mode == "hex") {
                     convertBases(result, 16);
                 }
-                else if (mode == "binary") {
+                else if (EntryBox.Mode == "binary") {
                     convertBases(result, 2);
                 }
-                txtResult.Text = result.ToString();
+                EntryBox.Text = result.ToString();
                 lastResult = result.ToString();
-                lastOperation = txtHistoryBox.Text;
+                lastOperation = HistoryBox.Text;
             }
             catch (Exception ex) {
                 setErrorState(ex.Message);
@@ -142,18 +149,18 @@ namespace CalculatorFinalProject {
         }
 
         private void handleButtonClick(string buttonText) {
-            if (mode == "decimal") {
-                txtHistoryBox.Text += buttonText;
+            if (EntryBox.Mode == "decimal") {
+                HistoryBox.Text += buttonText;
             }
-            else if (mode == "binary") {
+            else if (EntryBox.Mode == "binary") {
                 displayBinary(buttonText);
             }
-            else if (mode == "hex") {
-                txtHistoryBox.Text += buttonText;
+            else if (EntryBox.Mode == "hex") {
+                HistoryBox.Text += buttonText;
             }
-            txtResult.Text += buttonText;
-            txtResult.Focus();
-            txtResult.SelectionStart = txtResult.Text.Length;
+            EntryBox.Text += buttonText;
+            EntryBox.Box.Focus();
+            EntryBox.Box.SelectionStart = EntryBox.Text.Length;
         }
 
         private void btnClear_Click(object sender, EventArgs e) {
@@ -165,25 +172,25 @@ namespace CalculatorFinalProject {
         }
 
         private void btnBack_Click(object sender, EventArgs e) {
-            string resultText = txtResult.Text;
-            txtHistoryBox.Text = "";
+            string resultText = EntryBox.Text;
+            HistoryBox.Text = "";
 
             if (resultText.Length > 0)
-                txtResult.Text = resultText.Remove(resultText.Length - 1, 1);
+                EntryBox.Text = resultText.Remove(resultText.Length - 1, 1);
 
-            txtHistoryBox.Text = txtResult.Text;
+            HistoryBox.Text = EntryBox.Text;
         }
 
         private void btnUndo_Click(object sender, EventArgs e) {
-            txtHistoryBox.Text = lastOperation;
-            txtResult.Text = lastResult;
+            HistoryBox.Text = lastOperation;
+            EntryBox.Text = lastResult;
             clearErrorState();
         }
 
         private void Calculator_Load(object sender, EventArgs e)
         => rdoDecimal.Checked = true;
         private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
-        => txtResult.Focus();
+        => EntryBox.Box.Focus();
         private void btn1_Click(object sender, EventArgs e) => handleButtonClick("1");
         private void btn2_Click(object sender, EventArgs e) => handleButtonClick("2");
         private void btn3_Click(object sender, EventArgs e) => handleButtonClick("3");
