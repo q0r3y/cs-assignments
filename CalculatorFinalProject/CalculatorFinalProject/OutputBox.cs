@@ -9,9 +9,12 @@ namespace CalculatorFinalProject {
 
         private string _CurrentNumber = "";
         public List<string> LastOperation;
+        public List<string> LastValidOperation;
+
         public OutputBox(ref TextBox TextBox) : base(ref TextBox) {
             this.TextBox = TextBox;
             LastOperation = new List<string>() { "" };
+            LastValidOperation = new List<string>() { "" };
         }
         public new void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {

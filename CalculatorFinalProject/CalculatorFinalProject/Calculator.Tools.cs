@@ -25,49 +25,115 @@ namespace CalculatorFinalProject {
             return validEntry;
         }
 
-        private void SetDecimalInputMode() {
-            InputBox.Mode = DEC;
-            btnDecimal.Enabled = true;
-            btnSqrt.Enabled = true;
-            btnRecip.Enabled = true;
-            btnPosNeg.Enabled = true;
-            InputBox.ClearState();
-            OutputBox.ClearState();
+        private void EnableErrorState() {
+            ErrorState = true;
+            InputBox.TextBox.Enabled = false;
+            btnBack.Visible = false;
+            btnUndo.Visible = true;
+            DeactivateButtons();
         }
 
-        private void SetDecimalOutputMode() {
-            OutputBox.Mode = DEC;
+        private void DeactivateButtons() {
+            foreach (Control ctrl in pnlButtons.Controls) {
+                if (ctrl.GetType() == typeof(Panel)) {
+                    foreach (Control c in ctrl.Controls) {
+                        if (c.GetType() == typeof(Button)) {
+                            if (c.Name != "btnClear" &&
+                                c.Name != "btnUndo")
+                                c.Enabled = false;
+                        }
+                    }
+                }
+                if (ctrl.GetType() == typeof(Button)) {
+                    if (ctrl.Name != "btnClear" &&
+                        ctrl.Name != "btnUndo")
+                        ctrl.Enabled = false;
+                }
+            }
+        }
+
+        private void DisableErrorState() {
+            InputBox.TextBox.Enabled = true;
+            btnBack.Visible = true;
+            btnUndo.Visible = false;
+            InputBox.TextBox.Focus();
+            ActivateButtons();
+        }
+
+        private void ActivateButtons() {
+            foreach (Control ctrl in pnlButtons.Controls) {
+                if (ctrl.GetType() == typeof(Panel)) {
+                    foreach (Control c in ctrl.Controls) {
+                        c.Enabled = true;
+                    }
+                }
+                ctrl.Enabled = true;
+            }
+        }
+
+        private void SetDecimalInputMode() {
+            InputBox.Mode = DEC;
+            SetActiveInputButtons();
+/*            btnDecimal.Enabled = true;
+            btnSqrt.Enabled = true;
+            btnRecip.Enabled = true;
+            btnPosNeg.Enabled = true;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
 
         private void SetBinaryInputMode() {
             InputBox.Mode = BIN;
-            btnDecimal.Enabled = false;
+            SetActiveInputButtons();
+/*            btnDecimal.Enabled = false;
             btnSqrt.Enabled = false;
             btnRecip.Enabled = false;
-            btnPosNeg.Enabled = false;
-            InputBox.ClearState();
-            OutputBox.ClearState();
-        }
-
-        private void SetBinaryOutputMode() {
-            OutputBox.Mode = BIN;
+            btnPosNeg.Enabled = false;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
 
         private void SetHexInputMode() {
             InputBox.Mode = HEX;
-            btnDecimal.Enabled = false;
+            SetActiveInputButtons();
+/*            btnDecimal.Enabled = false;
             btnSqrt.Enabled = false;
             btnRecip.Enabled = false;
-            btnPosNeg.Enabled = false;
+            btnPosNeg.Enabled = false;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
 
-        private void SetHexOutputMode() {
+        private void SetActiveInputButtons() {
+            List<char> validKeys = InputBox.CurrentMode.ValidKeys;
+            foreach (Button b in pnlNumbers.Controls) {
+                bool valid = false;
+                foreach (char k in validKeys) {
+                    if (b.Text == k.ToString())
+                        valid = true;
+                }
+                if (!valid) {
+                    b.Enabled = false;
+                }
+                else {
+                    b.Enabled = true;
+                }
+            }
+        }
+
+        private void SetOutputModeDec() {
+            OutputBox.Mode = DEC;
+            InputBox.ClearState();
+            OutputBox.ClearState();
+        }
+
+        private void SetOutputModeBin() {
+            OutputBox.Mode = BIN;
+            InputBox.ClearState();
+            OutputBox.ClearState();
+        }
+
+        private void SetOutputModeHex() {
             OutputBox.Mode = HEX;
             InputBox.ClearState();
             OutputBox.ClearState();

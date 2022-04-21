@@ -5,6 +5,7 @@ namespace CalculatorFinalProject {
 
         IOBox InputBox;
         OutputBox OutputBox;
+        bool ErrorState = false;
         const string BIN = "binary";
         const string DEC = "decimal";
         const string HEX = "hexidecimal";
@@ -32,11 +33,11 @@ namespace CalculatorFinalProject {
         private void rdoBottomHex_CheckedChanged(object sender, EventArgs e)
             => SetHexInputMode();
         private void rdoTopDec_CheckedChanged(object sender, EventArgs e)
-            => SetDecimalOutputMode();
+            => SetOutputModeDec();
         private void rdoTopBin_CheckedChanged(object sender, EventArgs e)
-            => OutputBox.Mode = BIN;
+            => SetOutputModeBin();
         private void rdoTopHex_CheckedChanged(object sender, EventArgs e)
-            => OutputBox.Mode = HEX;
+            => SetOutputModeHex();
         private void btn1_Click(object sender, EventArgs e) => HandleInput("1");
         private void btn2_Click(object sender, EventArgs e) => HandleInput("2");
         private void btn3_Click(object sender, EventArgs e) => HandleInput("3");
@@ -53,6 +54,8 @@ namespace CalculatorFinalProject {
         private void btnMultiply_Click(object sender, EventArgs e) => HandleInput("*");
         private void btnDivide_Click(object sender, EventArgs e) => HandleInput("/");
         private void btnClear_Click(object sender, EventArgs e) {
+            if (ErrorState)
+                DisableErrorState();
             InputBox.ClearState();
             OutputBox.ClearState();
         }
@@ -62,10 +65,24 @@ namespace CalculatorFinalProject {
                 string equation = InputBox.Text;
                 string ?result = new DataTable().Compute(equation, null).ToString();
                 InputBox.Text = result;
+                OutputBox.LastValidOperation.Clear();
+                foreach (string s in OutputBox.LastOperation)
+                    OutputBox.LastValidOperation.Add(s);
             }
             catch (Exception ex) {
+                EnableErrorState();
                 OutputBox.Text = ex.Message;
             }
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e) {
+            InputBox.Text = "";
+            OutputBox.Text = "";
+            foreach (string s in OutputBox.LastValidOperation) {
+                InputBox.Text += s;
+                OutputBox.Text += s;
+            }
+            DisableErrorState();
         }
     }
 }
