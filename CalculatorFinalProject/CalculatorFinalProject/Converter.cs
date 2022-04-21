@@ -10,6 +10,9 @@ namespace CalculatorFinalProject {
         public static string ConvertIntToBinary(int value) {
             return Convert.ToString(value, 2);
         }
+        public static string ConvertIntToHex(int value) {
+            return Convert.ToString(value, 16);
+        }
 
 
     }

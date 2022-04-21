@@ -35,14 +35,13 @@ namespace CalculatorFinalProject {
                         TextBox.Text += Converter.ConvertIntToBinary(result);
                     }
                     else if (Mode == "hexidecimal") {
-                        TextBox.Text += result;
+                        TextBox.Text += Converter.ConvertIntToHex(result);
                     }
                 } else {
                     TextBox.Text += value;
                 }
             }
         }
-
         public new void ClearState() {
             CurrentValue = "";
             TextBox.Text = "";

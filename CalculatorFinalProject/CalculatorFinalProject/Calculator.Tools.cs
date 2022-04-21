@@ -24,7 +24,6 @@ namespace CalculatorFinalProject {
             }
             return validEntry;
         }
-
         private void EnableErrorState() {
             ErrorState = true;
             InputBox.TextBox.Enabled = false;
@@ -32,7 +31,6 @@ namespace CalculatorFinalProject {
             btnUndo.Visible = true;
             DeactivateButtons();
         }
-
         private void DeactivateButtons() {
             foreach (Control ctrl in pnlButtons.Controls) {
                 if (ctrl.GetType() == typeof(Panel)) {
@@ -51,7 +49,6 @@ namespace CalculatorFinalProject {
                 }
             }
         }
-
         private void DisableErrorState() {
             InputBox.TextBox.Enabled = true;
             btnBack.Visible = true;
@@ -59,7 +56,6 @@ namespace CalculatorFinalProject {
             InputBox.TextBox.Focus();
             ActivateButtons();
         }
-
         private void ActivateButtons() {
             foreach (Control ctrl in pnlButtons.Controls) {
                 if (ctrl.GetType() == typeof(Panel)) {
@@ -70,40 +66,24 @@ namespace CalculatorFinalProject {
                 ctrl.Enabled = true;
             }
         }
-
         private void SetDecimalInputMode() {
             InputBox.Mode = DEC;
             SetActiveInputButtons();
-/*            btnDecimal.Enabled = true;
-            btnSqrt.Enabled = true;
-            btnRecip.Enabled = true;
-            btnPosNeg.Enabled = true;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void SetBinaryInputMode() {
             InputBox.Mode = BIN;
             SetActiveInputButtons();
-/*            btnDecimal.Enabled = false;
-            btnSqrt.Enabled = false;
-            btnRecip.Enabled = false;
-            btnPosNeg.Enabled = false;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void SetHexInputMode() {
             InputBox.Mode = HEX;
             SetActiveInputButtons();
-/*            btnDecimal.Enabled = false;
-            btnSqrt.Enabled = false;
-            btnRecip.Enabled = false;
-            btnPosNeg.Enabled = false;*/
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void SetActiveInputButtons() {
             List<char> validKeys = InputBox.CurrentMode.ValidKeys;
             foreach (Button b in pnlNumbers.Controls) {
@@ -120,19 +100,16 @@ namespace CalculatorFinalProject {
                 }
             }
         }
-
         private void SetOutputModeDec() {
             OutputBox.Mode = DEC;
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void SetOutputModeBin() {
             OutputBox.Mode = BIN;
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void SetOutputModeHex() {
             OutputBox.Mode = HEX;
             InputBox.ClearState();

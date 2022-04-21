@@ -59,7 +59,6 @@ namespace CalculatorFinalProject {
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         private void btnEquals_Click(object sender, EventArgs e) {
             try {
                 string equation = InputBox.Text;
@@ -69,19 +68,19 @@ namespace CalculatorFinalProject {
                 OutputBox.LastValidOperation.Clear();
                 foreach (string s in OutputBox.LastOperation)
                     OutputBox.LastValidOperation.Add(s);
+                InputBox.TextBox.Focus();
+                InputBox.TextBox.SelectionStart = InputBox.Text.Length;
             }
             catch (Exception ex) {
                 EnableErrorState();
                 OutputBox.Text = ex.Message;
             }
         }
-
         private void btnUndo_Click(object sender, EventArgs e) {
-            InputBox.Text = InputBox.LastValue;
             OutputBox.Text = "";
             OutputBox.LastOperation.Clear();
+            InputBox.Text = InputBox.LastValue;
             foreach (string s in OutputBox.LastValidOperation) {
-                //InputBox.Text += s;
                 OutputBox.Text += s;
                 OutputBox.LastOperation.Add(s);
             }
