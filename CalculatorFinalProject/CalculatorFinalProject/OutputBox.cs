@@ -5,16 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
-    public class HistoryBox : DisplayBox {
+    public class OutputBox : DisplayBox {
 
         private string _CurrentNumber = "";
         public List<string> LastOperation;
-
-        public HistoryBox(ref TextBox TextBox) : base(ref TextBox) {
+        public OutputBox(ref TextBox TextBox) : base(ref TextBox) {
             this.TextBox = TextBox;
             LastOperation = new List<string>() { "" };
         }
-
         public new void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
                 _CurrentNumber += val;
@@ -25,16 +23,28 @@ namespace CalculatorFinalProject {
                 LastOperation.Add(key);
                 LastOperation.Add(_CurrentNumber);
             }
-            
             TextBox.Text = "";
             foreach (string value in LastOperation) {
                 if (int.TryParse(value, out int result)) {
-                    // Display in the correct MODE
-                    TextBox.Text += value;
+                    if (Mode == "decimal") {
+                        TextBox.Text += result;
+                    }
+                    else if (Mode == "binary") {
+                        TextBox.Text += Converter.ConvertIntToBinary(result);
+                    }
+                    else if (Mode == "hexidecimal") {
+                        TextBox.Text += result;
+                    }
                 } else {
                     TextBox.Text += value;
                 }
             }
+        }
+
+        public new void ClearState() {
+            _CurrentNumber = "";
+            TextBox.Text = "";
+            LastOperation = new List<string>() { "" };
         }
     }
 }

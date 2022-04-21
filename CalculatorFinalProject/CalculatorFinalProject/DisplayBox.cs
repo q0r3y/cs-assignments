@@ -37,5 +37,9 @@ namespace CalculatorFinalProject {
             }
             TextBox.Text += key;
         }
+        public void ClearState() {
+            _CurrentNumber = "";
+            TextBox.Text = "";
+        }
     }
 }

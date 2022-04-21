@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEntryBox = new System.Windows.Forms.TextBox();
+            this.txtInputBox = new System.Windows.Forms.TextBox();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnUndo = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.btnSqrt = new System.Windows.Forms.Button();
             this.btnPosNeg = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.btnRecip = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
             this.btnDecimal = new System.Windows.Forms.Button();
@@ -52,28 +52,28 @@
             this.btnSubtract = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdoTopHex = new System.Windows.Forms.RadioButton();
-            this.rdoTopBin = new System.Windows.Forms.RadioButton();
-            this.rdoTopDec = new System.Windows.Forms.RadioButton();
-            this.txtHistoryBox = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdoBottomHex = new System.Windows.Forms.RadioButton();
-            this.rdoBottomBin = new System.Windows.Forms.RadioButton();
-            this.rdoBottomDec = new System.Windows.Forms.RadioButton();
+            this.grpOutputBox = new System.Windows.Forms.GroupBox();
+            this.rdoOutputHex = new System.Windows.Forms.RadioButton();
+            this.rdoOutputBin = new System.Windows.Forms.RadioButton();
+            this.rdoOutputDec = new System.Windows.Forms.RadioButton();
+            this.txtOutputBox = new System.Windows.Forms.TextBox();
+            this.grpInputBox = new System.Windows.Forms.GroupBox();
+            this.rdoInputHex = new System.Windows.Forms.RadioButton();
+            this.rdoInputBin = new System.Windows.Forms.RadioButton();
+            this.rdoInputDec = new System.Windows.Forms.RadioButton();
             this.pnlButtons.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpOutputBox.SuspendLayout();
+            this.grpInputBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtEntryBox
+            // txtInputBox
             // 
-            this.txtEntryBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEntryBox.Location = new System.Drawing.Point(12, 119);
-            this.txtEntryBox.Name = "txtEntryBox";
-            this.txtEntryBox.Size = new System.Drawing.Size(228, 39);
-            this.txtEntryBox.TabIndex = 0;
-            this.txtEntryBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntryBox_KeyPress);
+            this.txtInputBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtInputBox.Location = new System.Drawing.Point(12, 88);
+            this.txtInputBox.Name = "txtInputBox";
+            this.txtInputBox.Size = new System.Drawing.Size(228, 39);
+            this.txtInputBox.TabIndex = 0;
+            this.txtInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntryBox_KeyPress);
             // 
             // pnlButtons
             // 
@@ -85,7 +85,7 @@
             this.pnlButtons.Controls.Add(this.btnSqrt);
             this.pnlButtons.Controls.Add(this.btnPosNeg);
             this.pnlButtons.Controls.Add(this.btn3);
-            this.pnlButtons.Controls.Add(this.button20);
+            this.pnlButtons.Controls.Add(this.btnRecip);
             this.pnlButtons.Controls.Add(this.btn2);
             this.pnlButtons.Controls.Add(this.btn7);
             this.pnlButtons.Controls.Add(this.btnDecimal);
@@ -99,7 +99,7 @@
             this.pnlButtons.Controls.Add(this.btnSubtract);
             this.pnlButtons.Controls.Add(this.btnMultiply);
             this.pnlButtons.Controls.Add(this.btn0);
-            this.pnlButtons.Location = new System.Drawing.Point(12, 162);
+            this.pnlButtons.Location = new System.Drawing.Point(12, 176);
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(228, 230);
             this.pnlButtons.TabIndex = 1;
@@ -124,6 +124,7 @@
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBack
             // 
@@ -188,15 +189,15 @@
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
-            // button20
+            // btnRecip
             // 
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.Location = new System.Drawing.Point(188, 95);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(40, 40);
-            this.button20.TabIndex = 20;
-            this.button20.Text = "1/X";
-            this.button20.UseVisualStyleBackColor = true;
+            this.btnRecip.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRecip.Location = new System.Drawing.Point(188, 95);
+            this.btnRecip.Name = "btnRecip";
+            this.btnRecip.Size = new System.Drawing.Size(40, 40);
+            this.btnRecip.TabIndex = 20;
+            this.btnRecip.Text = "1/X";
+            this.btnRecip.UseVisualStyleBackColor = true;
             // 
             // btn2
             // 
@@ -340,117 +341,119 @@
             this.btn0.UseVisualStyleBackColor = true;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
-            // groupBox1
+            // grpOutputBox
             // 
-            this.groupBox1.Controls.Add(this.rdoTopHex);
-            this.groupBox1.Controls.Add(this.rdoTopBin);
-            this.groupBox1.Controls.Add(this.rdoTopDec);
-            this.groupBox1.Location = new System.Drawing.Point(12, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(228, 37);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Top Mode";
+            this.grpOutputBox.Controls.Add(this.rdoOutputHex);
+            this.grpOutputBox.Controls.Add(this.rdoOutputBin);
+            this.grpOutputBox.Controls.Add(this.rdoOutputDec);
+            this.grpOutputBox.Location = new System.Drawing.Point(12, 46);
+            this.grpOutputBox.Name = "grpOutputBox";
+            this.grpOutputBox.Size = new System.Drawing.Size(228, 37);
+            this.grpOutputBox.TabIndex = 2;
+            this.grpOutputBox.TabStop = false;
+            this.grpOutputBox.Text = "Output Mode";
             // 
-            // rdoTopHex
+            // rdoOutputHex
             // 
-            this.rdoTopHex.AutoSize = true;
-            this.rdoTopHex.Location = new System.Drawing.Point(176, 14);
-            this.rdoTopHex.Name = "rdoTopHex";
-            this.rdoTopHex.Size = new System.Drawing.Size(45, 19);
-            this.rdoTopHex.TabIndex = 2;
-            this.rdoTopHex.TabStop = true;
-            this.rdoTopHex.Text = "Hex";
-            this.rdoTopHex.UseVisualStyleBackColor = true;
-            this.rdoTopHex.CheckedChanged += new System.EventHandler(this.rdoTopHex_CheckedChanged);
+            this.rdoOutputHex.AutoSize = true;
+            this.rdoOutputHex.Location = new System.Drawing.Point(176, 14);
+            this.rdoOutputHex.Name = "rdoOutputHex";
+            this.rdoOutputHex.Size = new System.Drawing.Size(46, 19);
+            this.rdoOutputHex.TabIndex = 2;
+            this.rdoOutputHex.TabStop = true;
+            this.rdoOutputHex.Text = "Hex";
+            this.rdoOutputHex.UseVisualStyleBackColor = true;
+            this.rdoOutputHex.CheckedChanged += new System.EventHandler(this.rdoTopHex_CheckedChanged);
             // 
-            // rdoTopBin
+            // rdoOutputBin
             // 
-            this.rdoTopBin.AutoSize = true;
-            this.rdoTopBin.Location = new System.Drawing.Point(96, 14);
-            this.rdoTopBin.Name = "rdoTopBin";
-            this.rdoTopBin.Size = new System.Drawing.Size(58, 19);
-            this.rdoTopBin.TabIndex = 1;
-            this.rdoTopBin.TabStop = true;
-            this.rdoTopBin.Text = "Binary";
-            this.rdoTopBin.UseVisualStyleBackColor = true;
+            this.rdoOutputBin.AutoSize = true;
+            this.rdoOutputBin.Location = new System.Drawing.Point(96, 14);
+            this.rdoOutputBin.Name = "rdoOutputBin";
+            this.rdoOutputBin.Size = new System.Drawing.Size(58, 19);
+            this.rdoOutputBin.TabIndex = 1;
+            this.rdoOutputBin.TabStop = true;
+            this.rdoOutputBin.Text = "Binary";
+            this.rdoOutputBin.UseVisualStyleBackColor = true;
+            this.rdoOutputBin.CheckedChanged += new System.EventHandler(this.rdoTopBin_CheckedChanged);
             // 
-            // rdoTopDec
+            // rdoOutputDec
             // 
-            this.rdoTopDec.AutoSize = true;
-            this.rdoTopDec.Location = new System.Drawing.Point(6, 14);
-            this.rdoTopDec.Name = "rdoTopDec";
-            this.rdoTopDec.Size = new System.Drawing.Size(68, 19);
-            this.rdoTopDec.TabIndex = 0;
-            this.rdoTopDec.TabStop = true;
-            this.rdoTopDec.Text = "Decimal";
-            this.rdoTopDec.UseVisualStyleBackColor = true;
+            this.rdoOutputDec.AutoSize = true;
+            this.rdoOutputDec.Location = new System.Drawing.Point(6, 14);
+            this.rdoOutputDec.Name = "rdoOutputDec";
+            this.rdoOutputDec.Size = new System.Drawing.Size(68, 19);
+            this.rdoOutputDec.TabIndex = 0;
+            this.rdoOutputDec.TabStop = true;
+            this.rdoOutputDec.Text = "Decimal";
+            this.rdoOutputDec.UseVisualStyleBackColor = true;
+            this.rdoOutputDec.CheckedChanged += new System.EventHandler(this.rdoTopDec_CheckedChanged);
             // 
-            // txtHistoryBox
+            // txtOutputBox
             // 
-            this.txtHistoryBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtHistoryBox.Location = new System.Drawing.Point(12, 88);
-            this.txtHistoryBox.Name = "txtHistoryBox";
-            this.txtHistoryBox.ReadOnly = true;
-            this.txtHistoryBox.Size = new System.Drawing.Size(228, 27);
-            this.txtHistoryBox.TabIndex = 3;
+            this.txtOutputBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtOutputBox.Location = new System.Drawing.Point(12, 132);
+            this.txtOutputBox.Name = "txtOutputBox";
+            this.txtOutputBox.ReadOnly = true;
+            this.txtOutputBox.Size = new System.Drawing.Size(228, 39);
+            this.txtOutputBox.TabIndex = 3;
             // 
-            // groupBox2
+            // grpInputBox
             // 
-            this.groupBox2.Controls.Add(this.rdoBottomHex);
-            this.groupBox2.Controls.Add(this.rdoBottomBin);
-            this.groupBox2.Controls.Add(this.rdoBottomDec);
-            this.groupBox2.Location = new System.Drawing.Point(12, 47);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(228, 37);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bottom Mode";
+            this.grpInputBox.Controls.Add(this.rdoInputHex);
+            this.grpInputBox.Controls.Add(this.rdoInputBin);
+            this.grpInputBox.Controls.Add(this.rdoInputDec);
+            this.grpInputBox.Location = new System.Drawing.Point(12, 4);
+            this.grpInputBox.Name = "grpInputBox";
+            this.grpInputBox.Size = new System.Drawing.Size(228, 37);
+            this.grpInputBox.TabIndex = 3;
+            this.grpInputBox.TabStop = false;
+            this.grpInputBox.Text = "Input Mode";
             // 
-            // rdoBottomHex
+            // rdoInputHex
             // 
-            this.rdoBottomHex.AutoSize = true;
-            this.rdoBottomHex.Location = new System.Drawing.Point(176, 14);
-            this.rdoBottomHex.Name = "rdoBottomHex";
-            this.rdoBottomHex.Size = new System.Drawing.Size(45, 19);
-            this.rdoBottomHex.TabIndex = 2;
-            this.rdoBottomHex.Text = "Hex";
-            this.rdoBottomHex.UseVisualStyleBackColor = true;
-            this.rdoBottomHex.CheckedChanged += new System.EventHandler(this.rdoBottomHex_CheckedChanged);
+            this.rdoInputHex.AutoSize = true;
+            this.rdoInputHex.Location = new System.Drawing.Point(176, 14);
+            this.rdoInputHex.Name = "rdoInputHex";
+            this.rdoInputHex.Size = new System.Drawing.Size(46, 19);
+            this.rdoInputHex.TabIndex = 2;
+            this.rdoInputHex.Text = "Hex";
+            this.rdoInputHex.UseVisualStyleBackColor = true;
+            this.rdoInputHex.CheckedChanged += new System.EventHandler(this.rdoBottomHex_CheckedChanged);
             // 
-            // rdoBottomBin
+            // rdoInputBin
             // 
-            this.rdoBottomBin.AutoSize = true;
-            this.rdoBottomBin.Location = new System.Drawing.Point(96, 14);
-            this.rdoBottomBin.Name = "rdoBottomBin";
-            this.rdoBottomBin.Size = new System.Drawing.Size(58, 19);
-            this.rdoBottomBin.TabIndex = 1;
-            this.rdoBottomBin.Text = "Binary";
-            this.rdoBottomBin.UseVisualStyleBackColor = true;
-            this.rdoBottomBin.CheckedChanged += new System.EventHandler(this.rdoBottomBin_CheckedChanged);
+            this.rdoInputBin.AutoSize = true;
+            this.rdoInputBin.Location = new System.Drawing.Point(96, 14);
+            this.rdoInputBin.Name = "rdoInputBin";
+            this.rdoInputBin.Size = new System.Drawing.Size(58, 19);
+            this.rdoInputBin.TabIndex = 1;
+            this.rdoInputBin.Text = "Binary";
+            this.rdoInputBin.UseVisualStyleBackColor = true;
+            this.rdoInputBin.CheckedChanged += new System.EventHandler(this.rdoBottomBin_CheckedChanged);
             // 
-            // rdoBottomDec
+            // rdoInputDec
             // 
-            this.rdoBottomDec.AutoSize = true;
-            this.rdoBottomDec.Location = new System.Drawing.Point(6, 14);
-            this.rdoBottomDec.Name = "rdoBottomDec";
-            this.rdoBottomDec.Size = new System.Drawing.Size(68, 19);
-            this.rdoBottomDec.TabIndex = 0;
-            this.rdoBottomDec.Text = "Decimal";
-            this.rdoBottomDec.UseVisualStyleBackColor = true;
-            this.rdoBottomDec.CheckedChanged += new System.EventHandler(this.rdoBottomDec_CheckedChanged);
+            this.rdoInputDec.AutoSize = true;
+            this.rdoInputDec.Location = new System.Drawing.Point(6, 14);
+            this.rdoInputDec.Name = "rdoInputDec";
+            this.rdoInputDec.Size = new System.Drawing.Size(68, 19);
+            this.rdoInputDec.TabIndex = 0;
+            this.rdoInputDec.Text = "Decimal";
+            this.rdoInputDec.UseVisualStyleBackColor = true;
+            this.rdoInputDec.CheckedChanged += new System.EventHandler(this.rdoBottomDec_CheckedChanged);
             // 
             // Calculator
             // 
             this.AcceptButton = this.btnEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 401);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.txtHistoryBox);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(252, 412);
+            this.Controls.Add(this.grpInputBox);
+            this.Controls.Add(this.txtOutputBox);
+            this.Controls.Add(this.grpOutputBox);
             this.Controls.Add(this.pnlButtons);
-            this.Controls.Add(this.txtEntryBox);
+            this.Controls.Add(this.txtInputBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Calculator";
@@ -460,10 +463,10 @@
             this.Load += new System.EventHandler(this.Calculator_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Calculator_KeyPress);
             this.pnlButtons.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpOutputBox.ResumeLayout(false);
+            this.grpOutputBox.PerformLayout();
+            this.grpInputBox.ResumeLayout(false);
+            this.grpInputBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,7 +474,7 @@
 
         #endregion
 
-        private TextBox txtEntryBox;
+        private TextBox txtInputBox;
         private Panel pnlButtons;
         private Button btnDivide;
         private Button btnMultiply;
@@ -490,19 +493,19 @@
         private Button btn1;
         private Button btn4;
         private Button btnSqrt;
-        private Button button20;
+        private Button btnRecip;
         private Button btnEquals;
         private Button btnClear;
         private Button btnBack;
-        private GroupBox groupBox1;
-        private RadioButton rdoTopHex;
-        private RadioButton rdoTopBin;
-        private RadioButton rdoTopDec;
-        private TextBox txtHistoryBox;
+        private GroupBox grpOutputBox;
+        private RadioButton rdoOutputHex;
+        private RadioButton rdoOutputBin;
+        private RadioButton rdoOutputDec;
+        private TextBox txtOutputBox;
         private Button btnUndo;
-        private GroupBox groupBox2;
-        private RadioButton rdoBottomHex;
-        private RadioButton rdoBottomBin;
-        private RadioButton rdoBottomDec;
+        private GroupBox grpInputBox;
+        private RadioButton rdoInputHex;
+        private RadioButton rdoInputBin;
+        private RadioButton rdoInputDec;
     }
 }

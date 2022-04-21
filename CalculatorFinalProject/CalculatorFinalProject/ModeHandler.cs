@@ -2,11 +2,9 @@
     public class ModeHandler {
         private string mode = "decimal";
         private List<char> validKeys;
-
         public List<char> ValidKeys {
             get { return validKeys; }
         }
-
         public string Mode {
             get {
                 return mode;
@@ -16,11 +14,9 @@
                 setValidKeys();
             }
         }
-
         public ModeHandler() {
             setValidKeys();
         }
-
         private void setValidKeys() {
             if (mode == "decimal") {
                 validKeys = new List<char> {

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace CalculatorFinalProject {
     public static class Converter {
 
+        public static string ConvertIntToBinary(int value) {
+            return Convert.ToString(value, 2);
+        }
 
 
     }
