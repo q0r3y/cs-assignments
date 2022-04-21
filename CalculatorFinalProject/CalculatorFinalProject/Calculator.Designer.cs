@@ -241,6 +241,7 @@
             this.btnEquals.TabIndex = 19;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
             // btn5
             // 
@@ -392,7 +393,7 @@
             // txtOutputBox
             // 
             this.txtOutputBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOutputBox.Location = new System.Drawing.Point(12, 132);
+            this.txtOutputBox.Location = new System.Drawing.Point(12, 133);
             this.txtOutputBox.Name = "txtOutputBox";
             this.txtOutputBox.ReadOnly = true;
             this.txtOutputBox.Size = new System.Drawing.Size(228, 39);

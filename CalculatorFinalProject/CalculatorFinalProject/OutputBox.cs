@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
-    public class OutputBox : DisplayBox {
+    public class OutputBox : IOBox {
 
         private string _CurrentNumber = "";
         public List<string> LastOperation;

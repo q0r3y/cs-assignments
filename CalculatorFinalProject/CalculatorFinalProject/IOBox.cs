@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
-    public class DisplayBox {
+    public class IOBox {
         public TextBox TextBox { get; set; }
         public ModeHandler CurrentMode = new ModeHandler();
         private string _CurrentNumber = "";
-        public DisplayBox(ref TextBox TextBox) {
+        public IOBox(ref TextBox TextBox) {
             this.TextBox = TextBox;
         }
         public string Mode {

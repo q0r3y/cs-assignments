@@ -3,14 +3,14 @@ using System.Data;
 namespace CalculatorFinalProject {
     public partial class Calculator : Form {
 
-        DisplayBox InputBox;
+        IOBox InputBox;
         OutputBox OutputBox;
         const string BIN = "binary";
         const string DEC = "decimal";
         const string HEX = "hexidecimal";
         public Calculator() {
             InitializeComponent();
-            InputBox = new DisplayBox(ref txtInputBox);
+            InputBox = new IOBox(ref txtInputBox);
             OutputBox = new OutputBox(ref txtOutputBox);
         }
         private void Calculator_Load(object sender, EventArgs e) {
@@ -55,6 +55,17 @@ namespace CalculatorFinalProject {
         private void btnClear_Click(object sender, EventArgs e) {
             InputBox.ClearState();
             OutputBox.ClearState();
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e) {
+            try {
+                string equation = InputBox.Text;
+                string ?result = new DataTable().Compute(equation, null).ToString();
+                InputBox.Text = result;
+            }
+            catch (Exception ex) {
+                OutputBox.Text = ex.Message;
+            }
         }
     }
 }
