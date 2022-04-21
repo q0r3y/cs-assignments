@@ -4,7 +4,6 @@ namespace CalculatorFinalProject {
     public partial class Calculator : Form {
 
         private bool errorState = false;
-        //public string mode = "decimal";
         private string lastResult = "";
         private string lastOperation = "";
         private string lastNumber = "";
@@ -13,8 +12,8 @@ namespace CalculatorFinalProject {
 
         public Calculator() {
             InitializeComponent();
-            HistoryBox = new CalcBox(ref txtHistoryBox);
             EntryBox = new CalcBox(ref txtEntryBox);
+            HistoryBox = new CalcBox(ref txtHistoryBox);
         }
 
         private void setErrorState(string msg) {
@@ -73,11 +72,7 @@ namespace CalculatorFinalProject {
 
         private bool isValidKey(KeyPressEventArgs e) {
             bool validEntry = false;
-            char[] validKeys = {
-                '1','2','3','4','5','6','7','8','9','0',
-                '/','*','+','-','.','(',')'
-            };
-
+            List<char> validKeys = EntryBox.CurrentMode.ValidKeys;
             foreach (char c in validKeys) {
                 if (c == (e.KeyChar)) {
                     validEntry = true;
@@ -92,26 +87,7 @@ namespace CalculatorFinalProject {
             HistoryBox.Text = "";
         }
 
-        private void rdoDecimal_CheckedChanged(object sender, EventArgs e) {
-            clearTextBoxes();
-            // Convert Result box and display box to decimal
-            btnDecimal.Enabled = true;
-            EntryBox.Mode = "decimal";
-        }
 
-        private void rdoBinary_CheckedChanged(object sender, EventArgs e) {
-            clearTextBoxes();
-            // Convert Result box and display box to binary
-            btnDecimal.Enabled = false;
-            EntryBox.Mode = "binary";
-        }
-
-        private void rdoHex_CheckedChanged(object sender, EventArgs e) {
-            clearTextBoxes();
-            // Convert Result box and display box to hex
-            btnDecimal.Enabled = false;
-            EntryBox.Mode = "hex";
-        }
 
         private string convertBases(string number, int toBase) {
             int fromBase = 10;
@@ -172,11 +148,11 @@ namespace CalculatorFinalProject {
         }
 
         private void btnBack_Click(object sender, EventArgs e) {
-            string resultText = EntryBox.Text;
+            string entryText = EntryBox.Text;
             HistoryBox.Text = "";
 
-            if (resultText.Length > 0)
-                EntryBox.Text = resultText.Remove(resultText.Length - 1, 1);
+            if (entryText.Length > 0)
+                EntryBox.Text = entryText.Remove(entryText.Length - 1, 1);
 
             HistoryBox.Text = EntryBox.Text;
         }
@@ -186,9 +162,32 @@ namespace CalculatorFinalProject {
             EntryBox.Text = lastResult;
             clearErrorState();
         }
-
+        private void rdoTopDecimal_CheckedChanged(object sender, EventArgs e) {
+            //clearTextBoxes();
+            HistoryBox.Mode = "decimal";
+        }
+        private void rdoTopBinary_CheckedChanged(object sender, EventArgs e) {
+            //clearTextBoxes();
+            HistoryBox.Mode = "binary";
+        }
+        private void rdoTopHex_CheckedChanged(object sender, EventArgs e) {
+            //clearTextBoxes();
+            HistoryBox.Mode = "hex";
+        }
+        private void rdoBottomDec_CheckedChanged(object sender, EventArgs e) {
+            btnDecimal.Enabled = true;
+            EntryBox.Mode = "decimal";
+        }
+        private void rdoBottomBin_CheckedChanged(object sender, EventArgs e) {
+            btnDecimal.Enabled = false;
+            EntryBox.Mode = "binary";
+        }
+        private void rdoBottomHex_CheckedChanged(object sender, EventArgs e) {
+            btnDecimal.Enabled = false;
+            EntryBox.Mode = "hex";
+        }
         private void Calculator_Load(object sender, EventArgs e)
-        => rdoDecimal.Checked = true;
+        => rdoTopDec.Checked = true;
         private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
         => EntryBox.Box.Focus();
         private void btn1_Click(object sender, EventArgs e) => handleButtonClick("1");

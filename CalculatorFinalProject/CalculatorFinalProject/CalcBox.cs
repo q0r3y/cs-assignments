@@ -26,6 +26,7 @@ namespace CalculatorFinalProject {
             } 
 
             set {
+                getNumeralSystem(value);
                 Box.Text = value;
             } 
         }
@@ -35,7 +36,8 @@ namespace CalculatorFinalProject {
             CurrentMode = new ModeTracker();
         }
 
+        private void getNumeralSystem(string value) {
 
-
+        }
     }
 }
