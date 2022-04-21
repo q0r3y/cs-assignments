@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace CalculatorFinalProject {
     public class OutputBox : IOBox {
 
-        private string _CurrentNumber = "";
         public List<string> LastOperation;
         public List<string> LastValidOperation;
 
@@ -18,13 +17,13 @@ namespace CalculatorFinalProject {
         }
         public new void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
-                _CurrentNumber += val;
-                LastOperation[LastOperation.Count - 1] = _CurrentNumber;
+                CurrentValue += val;
+                LastOperation[LastOperation.Count - 1] = CurrentValue;
             }
             else {
-                _CurrentNumber = "";
+                CurrentValue = "";
                 LastOperation.Add(key);
-                LastOperation.Add(_CurrentNumber);
+                LastOperation.Add(CurrentValue);
             }
             TextBox.Text = "";
             foreach (string value in LastOperation) {
@@ -45,7 +44,7 @@ namespace CalculatorFinalProject {
         }
 
         public new void ClearState() {
-            _CurrentNumber = "";
+            CurrentValue = "";
             TextBox.Text = "";
             LastOperation = new List<string>() { "" };
         }

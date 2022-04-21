@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
     public class IOBox {
+
+        public string LastValue = "";
+        public string CurrentValue = "";
         public TextBox TextBox { get; set; }
         public ModeHandler CurrentMode = new ModeHandler();
-        private string _CurrentNumber = "";
+
         public IOBox(ref TextBox TextBox) {
             this.TextBox = TextBox;
         }
@@ -31,14 +34,14 @@ namespace CalculatorFinalProject {
         }
         public void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
-                _CurrentNumber += val;
+                CurrentValue += val;
             } else {
-                _CurrentNumber = "";
+                CurrentValue = "";
             }
             TextBox.Text += key;
         }
         public void ClearState() {
-            _CurrentNumber = "";
+            CurrentValue = "";
             TextBox.Text = "";
         }
     }

@@ -65,6 +65,7 @@ namespace CalculatorFinalProject {
                 string equation = InputBox.Text;
                 string ?result = new DataTable().Compute(equation, null).ToString();
                 InputBox.Text = result;
+                InputBox.LastValue = result;
                 OutputBox.LastValidOperation.Clear();
                 foreach (string s in OutputBox.LastOperation)
                     OutputBox.LastValidOperation.Add(s);
@@ -76,11 +77,13 @@ namespace CalculatorFinalProject {
         }
 
         private void btnUndo_Click(object sender, EventArgs e) {
-            InputBox.Text = "";
+            InputBox.Text = InputBox.LastValue;
             OutputBox.Text = "";
+            OutputBox.LastOperation.Clear();
             foreach (string s in OutputBox.LastValidOperation) {
-                InputBox.Text += s;
+                //InputBox.Text += s;
                 OutputBox.Text += s;
+                OutputBox.LastOperation.Add(s);
             }
             DisableErrorState();
         }
