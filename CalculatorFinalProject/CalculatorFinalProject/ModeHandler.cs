@@ -1,9 +1,9 @@
 ﻿namespace CalculatorFinalProject {
-    public class ModeTracker {
+    public class ModeHandler {
         private string mode = "decimal";
         private List<char> validKeys;
 
-        public List<char> ValidKeys { 
+        public List<char> ValidKeys {
             get { return validKeys; }
         }
 
@@ -17,7 +17,7 @@
             }
         }
 
-        public ModeTracker() {
+        public ModeHandler() {
             setValidKeys();
         }
 
@@ -34,7 +34,7 @@
                     '/','*','+','-','(',')','B','b'
                 };
             }
-            else if (mode == "hex") {
+            else if (mode == "hexidecimal") {
                 validKeys = new List<char> {
                     '1','2','3','4','5','6','7','8','9','0',
                     '/','*','+','-','(',')','A','B','C','D',

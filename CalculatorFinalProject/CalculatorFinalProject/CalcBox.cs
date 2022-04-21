@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
     public class CalcBox {
-
-        public ModeTracker CurrentMode;
+                
         public TextBox Box;
+        public string CurrentNumber;
+        public ModeHandler CurrentMode;
+        public List<string> LastOperation;
+        public string lastResult = "";
+        //public string lastOperation = "";
+        public string lastNumber = "";
 
         public string Mode {
             get {
@@ -26,18 +31,32 @@ namespace CalculatorFinalProject {
             } 
 
             set {
-                getNumeralSystem(value);
+                //SetLastNumber(value);
                 Box.Text = value;
             } 
         }
 
         public CalcBox(ref TextBox inputTextBox) {
             Box = inputTextBox;
-            CurrentMode = new ModeTracker();
+            CurrentMode = new ModeHandler();
+            LastOperation = new List<string>() { "" };
         }
 
-        private void getNumeralSystem(string value) {
+        private void SetLastNumber(string value) {
+            if (int.TryParse(value, out int num)) {
+                lastNumber += num;
+                LastOperation[LastOperation.Count - 1] += num;
+            }
+            else {
+                lastNumber = "";
+                LastOperation.Add(value);
+            }
+        }
 
+        private void DisplayLastNumber() {
+            if (int.TryParse(lastNumber, out int num)) {
+                Box.Text += num.ToString();
+            }
         }
     }
 }

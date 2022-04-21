@@ -73,7 +73,7 @@
             this.txtEntryBox.Name = "txtEntryBox";
             this.txtEntryBox.Size = new System.Drawing.Size(228, 39);
             this.txtEntryBox.TabIndex = 0;
-            this.txtEntryBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResult_KeyPress);
+            this.txtEntryBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntryBox_KeyPress);
             // 
             // pnlButtons
             // 
@@ -114,7 +114,6 @@
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = true;
             this.btnUndo.Visible = false;
-            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnClear
             // 
@@ -125,7 +124,6 @@
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBack
             // 
@@ -136,7 +134,6 @@
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btn9
             // 
@@ -243,7 +240,6 @@
             this.btnEquals.TabIndex = 19;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
-            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
             // btn5
             // 
@@ -378,7 +374,6 @@
             this.rdoTopBin.TabStop = true;
             this.rdoTopBin.Text = "Binary";
             this.rdoTopBin.UseVisualStyleBackColor = true;
-            this.rdoTopBin.CheckedChanged += new System.EventHandler(this.rdoTopBinary_CheckedChanged);
             // 
             // rdoTopDec
             // 
@@ -390,7 +385,6 @@
             this.rdoTopDec.TabStop = true;
             this.rdoTopDec.Text = "Decimal";
             this.rdoTopDec.UseVisualStyleBackColor = true;
-            this.rdoTopDec.CheckedChanged += new System.EventHandler(this.rdoTopDecimal_CheckedChanged);
             // 
             // txtHistoryBox
             // 
@@ -420,7 +414,6 @@
             this.rdoBottomHex.Name = "rdoBottomHex";
             this.rdoBottomHex.Size = new System.Drawing.Size(45, 19);
             this.rdoBottomHex.TabIndex = 2;
-            this.rdoBottomHex.TabStop = true;
             this.rdoBottomHex.Text = "Hex";
             this.rdoBottomHex.UseVisualStyleBackColor = true;
             this.rdoBottomHex.CheckedChanged += new System.EventHandler(this.rdoBottomHex_CheckedChanged);
@@ -432,7 +425,6 @@
             this.rdoBottomBin.Name = "rdoBottomBin";
             this.rdoBottomBin.Size = new System.Drawing.Size(58, 19);
             this.rdoBottomBin.TabIndex = 1;
-            this.rdoBottomBin.TabStop = true;
             this.rdoBottomBin.Text = "Binary";
             this.rdoBottomBin.UseVisualStyleBackColor = true;
             this.rdoBottomBin.CheckedChanged += new System.EventHandler(this.rdoBottomBin_CheckedChanged);
@@ -444,7 +436,6 @@
             this.rdoBottomDec.Name = "rdoBottomDec";
             this.rdoBottomDec.Size = new System.Drawing.Size(68, 19);
             this.rdoBottomDec.TabIndex = 0;
-            this.rdoBottomDec.TabStop = true;
             this.rdoBottomDec.Text = "Decimal";
             this.rdoBottomDec.UseVisualStyleBackColor = true;
             this.rdoBottomDec.CheckedChanged += new System.EventHandler(this.rdoBottomDec_CheckedChanged);
