@@ -8,7 +8,7 @@ namespace CalculatorFinalProject {
     public class OutputBox {
 
         public string Mode = "decimal";
-        public string CurrentValue = "";
+        private string CurrentNumber = "";
         public List<string> LastOperation;
         public List<string> LastValidOperation;
         public TextBox TextBox { get; set; }
@@ -27,25 +27,43 @@ namespace CalculatorFinalProject {
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
         }
+
         public void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
-                CurrentValue += val;
-                LastOperation[LastOperation.Count - 1] = CurrentValue;
+                CurrentNumber += val;
+                LastOperation[LastOperation.Count - 1] = CurrentNumber;
             }
             else {
-                CurrentValue = "";
+                CurrentNumber = "";
                 LastOperation.Add(key);
-                LastOperation.Add(CurrentValue);
+                LastOperation.Add(CurrentNumber);
             }
-            SetTextBox();
+            DisplayOpArray();
         }
 
-        private void SetTextBox() {
+        public void HandleValue(string value) {
+            if (int.TryParse(value, out int result)) {
+                if (Mode == "decimal") {
+                    TextBox.Text = result.ToString();
+                }
+                else if (Mode == "binary") {
+                    TextBox.Text = Converter.ConvertIntToBinary(result);
+                }
+                else if (Mode == "hexidecimal") {
+                    TextBox.Text = Converter.ConvertIntToHex(result);
+                }
+            }
+            else {
+                TextBox.Text += value;
+            }
+        }
+
+        private void DisplayOpArray() {
             TextBox.Text = "";
             foreach (string value in LastOperation) {
                 if (int.TryParse(value, out int result)) {
                     if (Mode == "decimal") {
-                        TextBox.Text += result;
+                        TextBox.Text += result.ToString();
                     }
                     else if (Mode == "binary") {
                         TextBox.Text += Converter.ConvertIntToBinary(result);
@@ -60,25 +78,26 @@ namespace CalculatorFinalProject {
             }
         }
 
-        public void SetResultText(string value) {
-            if (int.TryParse(value, out int result)) {
-                if (Mode == "decimal") {
-                    TextBox.Text = result.ToString();
-                }
-                else if (Mode == "binary") {
-                    TextBox.Text = Converter.ConvertIntToBinary(result);
-                }
-                else if (Mode == "hexidecimal") {
-                    TextBox.Text = Converter.ConvertIntToHex(result);
-                }
-            }
-        }
-
         public void ClearState() {
-            CurrentValue = "";
+            CurrentNumber = "";
             TextBox.Text = "";
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
+        }
+
+        public void SetLastValidOp() {
+           LastValidOperation.Clear();
+            foreach (string s in LastOperation)
+                LastValidOperation.Add(s);
+        }
+
+        public void RevertState() {
+            Text = "";
+            LastOperation.Clear();
+            foreach (string s in LastValidOperation) {
+                Text += s;
+                LastOperation.Add(s);
+            }
         }
     }
 }

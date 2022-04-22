@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,30 @@ namespace CalculatorFinalProject {
     public partial class Calculator {
 
         private void HandleInput(string key) {
-
             InputBox.HandleKey(key);
             OutputBox.HandleKey(key);
-
         }
+
+        private void HandleKeyPress(KeyPressEventArgs e) {
+            e.Handled = true;
+            if (isValidKey(e))
+                HandleInput(e.KeyChar.ToString());
+        }
+
+        private void HandleCalculation() {
+            try {
+                string equation = InputBox.Text;
+                string result = new DataTable().Compute(equation, null).ToString();
+                InputBox.HandleValue(result);
+                OutputBox.HandleValue(result);
+                OutputBox.SetLastValidOp();
+            }
+            catch (Exception ex) {
+                EnableErrorState();
+                OutputBox.Text = ex.Message;
+            }
+        }
+
         private bool isValidKey(KeyPressEventArgs e) {
             bool validEntry = false;
             List<char> validKeys = InputBox.ValidKeys;
@@ -24,6 +44,13 @@ namespace CalculatorFinalProject {
             }
             return validEntry;
         }
+        private void ClearState() {
+            if (ErrorState)
+                DisableErrorState();
+            InputBox.ClearState();
+            OutputBox.ClearState();
+        }
+
         private void EnableErrorState() {
             ErrorState = true;
             InputBox.TextBox.Enabled = false;
@@ -53,8 +80,8 @@ namespace CalculatorFinalProject {
             InputBox.TextBox.Enabled = true;
             btnBack.Visible = true;
             btnUndo.Visible = false;
-            InputBox.TextBox.Focus();
-            InputBox.TextBox.SelectionStart = InputBox.Text.Length;
+            InputBox.RevertState();
+            OutputBox.RevertState();
             ActivateButtons();
         }
         private void ActivateButtons() {
