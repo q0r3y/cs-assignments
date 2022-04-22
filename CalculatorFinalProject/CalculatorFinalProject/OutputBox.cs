@@ -5,17 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CalculatorFinalProject {
-    public class OutputBox : IOBox {
+    public class OutputBox {
 
+        public string Mode = "decimal";
+        public string CurrentValue = "";
         public List<string> LastOperation;
         public List<string> LastValidOperation;
+        public TextBox TextBox { get; set; }
 
-        public OutputBox(ref TextBox TextBox) : base(ref TextBox) {
+        public string Text {
+            get {
+                return TextBox.Text;
+            }
+            set {
+                TextBox.Text = value;
+            }
+        }
+
+        public OutputBox(ref TextBox TextBox) {
             this.TextBox = TextBox;
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
         }
-        public new void HandleKey(string key) {
+        public void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
                 CurrentValue += val;
                 LastOperation[LastOperation.Count - 1] = CurrentValue;
@@ -62,10 +74,11 @@ namespace CalculatorFinalProject {
             }
         }
 
-        public new void ClearState() {
+        public void ClearState() {
             CurrentValue = "";
             TextBox.Text = "";
             LastOperation = new List<string>() { "" };
+            LastValidOperation = new List<string>() { "" };
         }
     }
 }

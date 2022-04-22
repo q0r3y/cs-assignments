@@ -8,14 +8,14 @@ namespace CalculatorFinalProject {
     public partial class Calculator {
 
         private void HandleInput(string key) {
+
             InputBox.HandleKey(key);
             OutputBox.HandleKey(key);
-            InputBox.TextBox.Focus();
-            InputBox.TextBox.SelectionStart = InputBox.Text.Length;
+
         }
         private bool isValidKey(KeyPressEventArgs e) {
             bool validEntry = false;
-            List<char> validKeys = InputBox.CurrentMode.ValidKeys;
+            List<char> validKeys = InputBox.ValidKeys;
             foreach (char c in validKeys) {
                 if (c == (e.KeyChar)) {
                     validEntry = true;
@@ -54,6 +54,7 @@ namespace CalculatorFinalProject {
             btnBack.Visible = true;
             btnUndo.Visible = false;
             InputBox.TextBox.Focus();
+            InputBox.TextBox.SelectionStart = InputBox.Text.Length;
             ActivateButtons();
         }
         private void ActivateButtons() {
@@ -66,52 +67,18 @@ namespace CalculatorFinalProject {
                 ctrl.Enabled = true;
             }
         }
-/*        private void SetDecimalInputMode() {
-            InputBox.Mode = DEC;
-            SetActiveInputButtons();
-            InputBox.ClearState();
-            OutputBox.ClearState();
-        }
-        private void SetBinaryInputMode() {
-            InputBox.Mode = BIN;
-            SetActiveInputButtons();
-            InputBox.ClearState();
-            OutputBox.ClearState();
-        }
-        private void SetHexInputMode() {
-            InputBox.Mode = HEX;
-            SetActiveInputButtons();
-            InputBox.ClearState();
-            OutputBox.ClearState();
-        }
-        private void SetActiveInputButtons() {
-            List<char> validKeys = InputBox.CurrentMode.ValidKeys;
-            foreach (Button b in pnlNumbers.Controls) {
-                bool valid = false;
-                foreach (char k in validKeys) {
-                    if (b.Text == k.ToString())
-                        valid = true;
-                }
-                if (!valid) {
-                    b.Enabled = false;
-                }
-                else {
-                    b.Enabled = true;
-                }
-            }
-        }*/
         private void SetOutputModeDec() {
-            OutputBox.Mode = DEC;
+            OutputBox.Mode = "decimal";
             InputBox.ClearState();
             OutputBox.ClearState();
         }
         private void SetOutputModeBin() {
-            OutputBox.Mode = BIN;
+            OutputBox.Mode = "binary";
             InputBox.ClearState();
             OutputBox.ClearState();
         }
         private void SetOutputModeHex() {
-            OutputBox.Mode = HEX;
+            OutputBox.Mode = "hexidecimal";
             InputBox.ClearState();
             OutputBox.ClearState();
         }

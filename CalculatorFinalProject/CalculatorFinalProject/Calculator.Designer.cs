@@ -66,7 +66,7 @@
             // txtInputBox
             // 
             this.txtInputBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtInputBox.Location = new System.Drawing.Point(12, 88);
+            this.txtInputBox.Location = new System.Drawing.Point(12, 54);
             this.txtInputBox.Name = "txtInputBox";
             this.txtInputBox.Size = new System.Drawing.Size(228, 39);
             this.txtInputBox.TabIndex = 0;
@@ -86,7 +86,7 @@
             this.pnlButtons.Controls.Add(this.btnSubtract);
             this.pnlButtons.Controls.Add(this.btnMultiply);
             this.pnlButtons.Controls.Add(this.pnlNumbers);
-            this.pnlButtons.Location = new System.Drawing.Point(12, 176);
+            this.pnlButtons.Location = new System.Drawing.Point(12, 142);
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(228, 230);
             this.pnlButtons.TabIndex = 1;
@@ -353,7 +353,7 @@
             this.grpOutputBox.Controls.Add(this.rdoOutputHex);
             this.grpOutputBox.Controls.Add(this.rdoOutputBin);
             this.grpOutputBox.Controls.Add(this.rdoOutputDec);
-            this.grpOutputBox.Location = new System.Drawing.Point(12, 46);
+            this.grpOutputBox.Location = new System.Drawing.Point(12, 12);
             this.grpOutputBox.Name = "grpOutputBox";
             this.grpOutputBox.Size = new System.Drawing.Size(228, 37);
             this.grpOutputBox.TabIndex = 2;
@@ -399,7 +399,7 @@
             // txtOutputBox
             // 
             this.txtOutputBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOutputBox.Location = new System.Drawing.Point(12, 133);
+            this.txtOutputBox.Location = new System.Drawing.Point(12, 99);
             this.txtOutputBox.Name = "txtOutputBox";
             this.txtOutputBox.ReadOnly = true;
             this.txtOutputBox.Size = new System.Drawing.Size(228, 39);
@@ -410,7 +410,7 @@
             this.AcceptButton = this.btnEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 412);
+            this.ClientSize = new System.Drawing.Size(252, 379);
             this.Controls.Add(this.txtOutputBox);
             this.Controls.Add(this.grpOutputBox);
             this.Controls.Add(this.pnlButtons);

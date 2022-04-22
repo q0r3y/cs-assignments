@@ -3,20 +3,19 @@ using System.Data;
 namespace CalculatorFinalProject {
     public partial class Calculator : Form {
 
-        IOBox InputBox;
+        InputBox InputBox;
         OutputBox OutputBox;
         bool ErrorState = false;
-        const string BIN = "binary";
-        const string DEC = "decimal";
-        const string HEX = "hexidecimal";
+
         public Calculator() {
             InitializeComponent();
-            InputBox = new IOBox(ref txtInputBox);
+            InputBox = new InputBox(ref txtInputBox);
             OutputBox = new OutputBox(ref txtOutputBox);
         }
         private void Calculator_Load(object sender, EventArgs e) {
             rdoOutputDec.Checked = true;
         }
+
         private void txtEntryBox_KeyPress(object sender, KeyPressEventArgs e) {
             e.Handled = true;
             if (isValidKey(e)) {
@@ -25,12 +24,6 @@ namespace CalculatorFinalProject {
         }
         private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
             => InputBox.TextBox.Focus();
-/*        private void rdoBottomDec_CheckedChanged(object sender, EventArgs e)
-            => SetDecimalInputMode();
-        private void rdoBottomBin_CheckedChanged(object sender, EventArgs e)
-            => SetBinaryInputMode();
-        private void rdoBottomHex_CheckedChanged(object sender, EventArgs e)
-            => SetHexInputMode();*/
         private void rdoTopDec_CheckedChanged(object sender, EventArgs e)
             => SetOutputModeDec();
         private void rdoTopBin_CheckedChanged(object sender, EventArgs e)
@@ -84,7 +77,7 @@ namespace CalculatorFinalProject {
                 OutputBox.Text += s;
                 OutputBox.LastOperation.Add(s);
             }
-            DisableErrorState();
+            DisableErrorState();     
         }
     }
 }
