@@ -9,6 +9,10 @@ namespace CalculatorFinalProject {
     public partial class Calculator {
 
         private void HandleInput(string key) {
+/*            if (InputBox.Text.Length < 9) {
+
+            }*/
+// 99999*9999 - Max size
             InputBox.HandleKey(key);
             OutputBox.HandleKey(key);
         }

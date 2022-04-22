@@ -57,7 +57,6 @@ namespace CalculatorFinalProject {
                 TextBox.Text += value;
             }
         }
-
         private void DisplayOpArray() {
             TextBox.Text = "";
             foreach (string value in LastOperation) {
@@ -77,20 +76,17 @@ namespace CalculatorFinalProject {
                 }
             }
         }
-
         public void ClearState() {
             CurrentNumber = "";
             TextBox.Text = "";
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
         }
-
         public void SetLastValidOp() {
            LastValidOperation.Clear();
             foreach (string s in LastOperation)
                 LastValidOperation.Add(s);
         }
-
         public void RevertState() {
             Text = "";
             LastOperation.Clear();
