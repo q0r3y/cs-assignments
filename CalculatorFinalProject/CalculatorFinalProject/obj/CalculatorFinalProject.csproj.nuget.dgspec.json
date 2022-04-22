@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hahnc\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {}
+    "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hahnc\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {
+    "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hahnc\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
         "projectName": "CalculatorFinalProject",
-        "projectPath": "C:\\Users\\hahnc\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
-        "packagesPath": "C:\\Users\\hahnc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hahnc\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\obj\\",
+        "projectPath": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\CalculatorFinalProject.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\CIS106\\CalculatorFinalProject\\CalculatorFinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hahnc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

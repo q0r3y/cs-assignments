@@ -16,7 +16,6 @@ namespace CalculatorFinalProject {
         }
         private void Calculator_Load(object sender, EventArgs e) {
             rdoOutputDec.Checked = true;
-            rdoInputDec.Checked = true;
         }
         private void txtEntryBox_KeyPress(object sender, KeyPressEventArgs e) {
             e.Handled = true;
@@ -26,12 +25,12 @@ namespace CalculatorFinalProject {
         }
         private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
             => InputBox.TextBox.Focus();
-        private void rdoBottomDec_CheckedChanged(object sender, EventArgs e)
+/*        private void rdoBottomDec_CheckedChanged(object sender, EventArgs e)
             => SetDecimalInputMode();
         private void rdoBottomBin_CheckedChanged(object sender, EventArgs e)
             => SetBinaryInputMode();
         private void rdoBottomHex_CheckedChanged(object sender, EventArgs e)
-            => SetHexInputMode();
+            => SetHexInputMode();*/
         private void rdoTopDec_CheckedChanged(object sender, EventArgs e)
             => SetOutputModeDec();
         private void rdoTopBin_CheckedChanged(object sender, EventArgs e)
@@ -65,11 +64,12 @@ namespace CalculatorFinalProject {
                 string ?result = new DataTable().Compute(equation, null).ToString();
                 InputBox.Text = result;
                 InputBox.LastValue = result;
+                InputBox.TextBox.Focus();
+                InputBox.TextBox.SelectionStart = InputBox.Text.Length;
+                OutputBox.SetResultText(result);
                 OutputBox.LastValidOperation.Clear();
                 foreach (string s in OutputBox.LastOperation)
                     OutputBox.LastValidOperation.Add(s);
-                InputBox.TextBox.Focus();
-                InputBox.TextBox.SelectionStart = InputBox.Text.Length;
             }
             catch (Exception ex) {
                 EnableErrorState();

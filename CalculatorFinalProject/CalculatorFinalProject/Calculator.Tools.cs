@@ -66,7 +66,7 @@ namespace CalculatorFinalProject {
                 ctrl.Enabled = true;
             }
         }
-        private void SetDecimalInputMode() {
+/*        private void SetDecimalInputMode() {
             InputBox.Mode = DEC;
             SetActiveInputButtons();
             InputBox.ClearState();
@@ -99,7 +99,7 @@ namespace CalculatorFinalProject {
                     b.Enabled = true;
                 }
             }
-        }
+        }*/
         private void SetOutputModeDec() {
             OutputBox.Mode = DEC;
             InputBox.ClearState();

@@ -44,5 +44,7 @@ namespace CalculatorFinalProject {
             CurrentValue = "";
             TextBox.Text = "";
         }
+
+
     }
 }

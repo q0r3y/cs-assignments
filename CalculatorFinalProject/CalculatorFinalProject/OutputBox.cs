@@ -25,6 +25,10 @@ namespace CalculatorFinalProject {
                 LastOperation.Add(key);
                 LastOperation.Add(CurrentValue);
             }
+            SetTextBox();
+        }
+
+        private void SetTextBox() {
             TextBox.Text = "";
             foreach (string value in LastOperation) {
                 if (int.TryParse(value, out int result)) {
@@ -37,11 +41,27 @@ namespace CalculatorFinalProject {
                     else if (Mode == "hexidecimal") {
                         TextBox.Text += Converter.ConvertIntToHex(result);
                     }
-                } else {
+                }
+                else {
                     TextBox.Text += value;
                 }
             }
         }
+
+        public void SetResultText(string value) {
+            if (int.TryParse(value, out int result)) {
+                if (Mode == "decimal") {
+                    TextBox.Text = result.ToString();
+                }
+                else if (Mode == "binary") {
+                    TextBox.Text = Converter.ConvertIntToBinary(result);
+                }
+                else if (Mode == "hexidecimal") {
+                    TextBox.Text = Converter.ConvertIntToHex(result);
+                }
+            }
+        }
+
         public new void ClearState() {
             CurrentValue = "";
             TextBox.Text = "";

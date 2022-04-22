@@ -58,14 +58,9 @@
             this.rdoOutputBin = new System.Windows.Forms.RadioButton();
             this.rdoOutputDec = new System.Windows.Forms.RadioButton();
             this.txtOutputBox = new System.Windows.Forms.TextBox();
-            this.grpInputBox = new System.Windows.Forms.GroupBox();
-            this.rdoInputHex = new System.Windows.Forms.RadioButton();
-            this.rdoInputBin = new System.Windows.Forms.RadioButton();
-            this.rdoInputDec = new System.Windows.Forms.RadioButton();
             this.pnlButtons.SuspendLayout();
             this.pnlNumbers.SuspendLayout();
             this.grpOutputBox.SuspendLayout();
-            this.grpInputBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtInputBox
@@ -370,7 +365,7 @@
             this.rdoOutputHex.AutoSize = true;
             this.rdoOutputHex.Location = new System.Drawing.Point(176, 14);
             this.rdoOutputHex.Name = "rdoOutputHex";
-            this.rdoOutputHex.Size = new System.Drawing.Size(46, 19);
+            this.rdoOutputHex.Size = new System.Drawing.Size(45, 19);
             this.rdoOutputHex.TabIndex = 2;
             this.rdoOutputHex.TabStop = true;
             this.rdoOutputHex.Text = "Hex";
@@ -410,58 +405,12 @@
             this.txtOutputBox.Size = new System.Drawing.Size(228, 39);
             this.txtOutputBox.TabIndex = 3;
             // 
-            // grpInputBox
-            // 
-            this.grpInputBox.Controls.Add(this.rdoInputHex);
-            this.grpInputBox.Controls.Add(this.rdoInputBin);
-            this.grpInputBox.Controls.Add(this.rdoInputDec);
-            this.grpInputBox.Location = new System.Drawing.Point(12, 4);
-            this.grpInputBox.Name = "grpInputBox";
-            this.grpInputBox.Size = new System.Drawing.Size(228, 37);
-            this.grpInputBox.TabIndex = 3;
-            this.grpInputBox.TabStop = false;
-            this.grpInputBox.Text = "Input Mode";
-            // 
-            // rdoInputHex
-            // 
-            this.rdoInputHex.AutoSize = true;
-            this.rdoInputHex.Location = new System.Drawing.Point(176, 14);
-            this.rdoInputHex.Name = "rdoInputHex";
-            this.rdoInputHex.Size = new System.Drawing.Size(46, 19);
-            this.rdoInputHex.TabIndex = 2;
-            this.rdoInputHex.Text = "Hex";
-            this.rdoInputHex.UseVisualStyleBackColor = true;
-            this.rdoInputHex.CheckedChanged += new System.EventHandler(this.rdoBottomHex_CheckedChanged);
-            // 
-            // rdoInputBin
-            // 
-            this.rdoInputBin.AutoSize = true;
-            this.rdoInputBin.Location = new System.Drawing.Point(96, 14);
-            this.rdoInputBin.Name = "rdoInputBin";
-            this.rdoInputBin.Size = new System.Drawing.Size(58, 19);
-            this.rdoInputBin.TabIndex = 1;
-            this.rdoInputBin.Text = "Binary";
-            this.rdoInputBin.UseVisualStyleBackColor = true;
-            this.rdoInputBin.CheckedChanged += new System.EventHandler(this.rdoBottomBin_CheckedChanged);
-            // 
-            // rdoInputDec
-            // 
-            this.rdoInputDec.AutoSize = true;
-            this.rdoInputDec.Location = new System.Drawing.Point(6, 14);
-            this.rdoInputDec.Name = "rdoInputDec";
-            this.rdoInputDec.Size = new System.Drawing.Size(68, 19);
-            this.rdoInputDec.TabIndex = 0;
-            this.rdoInputDec.Text = "Decimal";
-            this.rdoInputDec.UseVisualStyleBackColor = true;
-            this.rdoInputDec.CheckedChanged += new System.EventHandler(this.rdoBottomDec_CheckedChanged);
-            // 
             // Calculator
             // 
             this.AcceptButton = this.btnEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(252, 412);
-            this.Controls.Add(this.grpInputBox);
             this.Controls.Add(this.txtOutputBox);
             this.Controls.Add(this.grpOutputBox);
             this.Controls.Add(this.pnlButtons);
@@ -478,8 +427,6 @@
             this.pnlNumbers.ResumeLayout(false);
             this.grpOutputBox.ResumeLayout(false);
             this.grpOutputBox.PerformLayout();
-            this.grpInputBox.ResumeLayout(false);
-            this.grpInputBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,10 +463,6 @@
         private RadioButton rdoOutputDec;
         private TextBox txtOutputBox;
         private Button btnUndo;
-        private GroupBox grpInputBox;
-        private RadioButton rdoInputHex;
-        private RadioButton rdoInputBin;
-        private RadioButton rdoInputDec;
         private Panel pnlNumbers;
     }
 }
