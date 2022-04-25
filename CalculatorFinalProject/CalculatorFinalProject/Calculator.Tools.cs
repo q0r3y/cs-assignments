@@ -31,7 +31,6 @@ namespace CalculatorFinalProject {
                 OutputBox.Text = ex.Message;
             }
         }
-
         private bool isValidKey(KeyPressEventArgs e) {
             bool validEntry = false;
             List<char> validKeys = InputBox.ValidKeys;
@@ -49,7 +48,6 @@ namespace CalculatorFinalProject {
             InputBox.ClearState();
             OutputBox.ClearState();
         }
-
         void HandleBackButton() {
             if (InputBox.Text.Length <= 1 || OutputBox.Text.Length <= 1) {
                 InputBox.ClearState();
@@ -62,7 +60,6 @@ namespace CalculatorFinalProject {
                 }
             }
         }
-
         private void EnableErrorState() {
             ErrorState = true;
             InputBox.TextBox.Enabled = false;
@@ -71,21 +68,9 @@ namespace CalculatorFinalProject {
             DeactivateButtons();
         }
         private void DeactivateButtons() {
-            foreach (Control ctrl in pnlButtons.Controls) {
-                if (ctrl.GetType() == typeof(Panel)) {
-                    foreach (Control c in ctrl.Controls) {
-                        if (c.GetType() == typeof(Button)) {
-                            if (c.Name != "btnClear" &&
-                                c.Name != "btnUndo")
-                                c.Enabled = false;
-                        }
-                    }
-                }
-                if (ctrl.GetType() == typeof(Button)) {
-                    if (ctrl.Name != "btnClear" &&
-                        ctrl.Name != "btnUndo")
-                        ctrl.Enabled = false;
-                }
+            foreach (Button btn in pnlButtons.Controls) {
+                if (btn.Name != "btnClear" && btn.Name != "btnUndo")
+                    btn.Enabled = false;
             }
         }
         private void DisableErrorState() {
