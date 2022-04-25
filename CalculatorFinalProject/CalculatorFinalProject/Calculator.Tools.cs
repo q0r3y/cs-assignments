@@ -9,7 +9,6 @@ namespace CalculatorFinalProject {
                 OutputBox.HandleKey(key);
             }
         }
-
         private void HandleKeyPress(KeyPressEventArgs e) {
             e.Handled = true;
             if (e.KeyChar == (char)Keys.Back)
@@ -17,11 +16,11 @@ namespace CalculatorFinalProject {
             if (isValidKey(e))
                 HandleInput(e.KeyChar.ToString());
         }
-
         private void HandleCalculation() {
             try {
                 string equation = InputBox.Text;
-                string result = new DataTable().Compute(equation, null).ToString();
+                string result = 
+                    new DataTable().Compute(equation, null).ToString();
                 InputBox.HandleValue(result);
                 OutputBox.HandleValue(result);
                 OutputBox.SetLastValidOp();
@@ -68,9 +67,9 @@ namespace CalculatorFinalProject {
             DeactivateButtons();
         }
         private void DeactivateButtons() {
-            foreach (Button btn in pnlButtons.Controls) {
-                if (btn.Name != "btnClear" && btn.Name != "btnUndo")
-                    btn.Enabled = false;
+            foreach (Button b in pnlButtons.Controls) {
+                if (b.Name != "btnClear" && b.Name != "btnUndo")
+                    b.Enabled = false;
             }
         }
         private void DisableErrorState() {

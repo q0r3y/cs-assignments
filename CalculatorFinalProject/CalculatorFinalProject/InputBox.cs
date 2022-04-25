@@ -26,12 +26,14 @@ namespace CalculatorFinalProject {
         }
         public void Backspace() {
             if (TextBox.Text.Length > 0)
-                TextBox.Text = TextBox.Text.Remove(TextBox.Text.Length - 1);
+                TextBox.Text = 
+                    TextBox.Text.Remove(TextBox.Text.Length - 1);
             else
                 TextBox.Text = "";
 
             if (LastValue.Length > 0) 
-                LastValue = LastValue.Remove(LastValue.Length - 1);
+                LastValue = 
+                    LastValue.Remove(LastValue.Length - 1);
             else
                 LastValue = "";
 

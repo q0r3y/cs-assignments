@@ -12,7 +12,6 @@ namespace CalculatorFinalProject {
         public List<string> LastOperation;
         public List<string> LastValidOperation;
         public TextBox TextBox { get; set; }
-
         public string Text {
             get {
                 return TextBox.Text;
@@ -21,17 +20,16 @@ namespace CalculatorFinalProject {
                 TextBox.Text = value;
             }
         }
-
         public OutputBox(ref TextBox TextBox) {
             this.TextBox = TextBox;
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
         }
-
         public void HandleKey(string key) {
             if (int.TryParse(key, out int val)) {
                 CurrentNumber += val;
-                LastOperation[LastOperation.Count - 1] = CurrentNumber;
+                LastOperation[LastOperation.Count - 1] = 
+                    CurrentNumber;
             }
             else {
                 CurrentNumber = "";
@@ -40,20 +38,22 @@ namespace CalculatorFinalProject {
             }
             DisplayOpArray();
         }
-
         public void HandleValue(string value) {
             if (value.Length > 10) {
                 value = value.Substring(0, 10);
             }
             if (int.TryParse(value, out int result)) {
                 if (Mode == "decimal") {
-                    TextBox.Text = result.ToString();
+                    TextBox.Text = 
+                        result.ToString();
                 }
                 else if (Mode == "binary") {
-                    TextBox.Text = Converter.ConvertIntToBinary(result);
+                    TextBox.Text = 
+                        Converter.ConvertIntToBinary(result);
                 }
                 else if (Mode == "hexidecimal") {
-                    TextBox.Text = Converter.ConvertIntToHex(result);
+                    TextBox.Text = 
+                        Converter.ConvertIntToHex(result);
                 }
             }
             else {
@@ -65,13 +65,16 @@ namespace CalculatorFinalProject {
             foreach (string value in LastOperation) {
                 if (int.TryParse(value, out int result)) {
                     if (Mode == "decimal") {
-                        TextBox.Text += result.ToString();
+                        TextBox.Text += 
+                            result.ToString();
                     }
                     else if (Mode == "binary") {
-                        TextBox.Text += Converter.ConvertIntToBinary(result);
+                        TextBox.Text += 
+                            Converter.ConvertIntToBinary(result);
                     }
                     else if (Mode == "hexidecimal") {
-                        TextBox.Text += Converter.ConvertIntToHex(result);
+                        TextBox.Text += 
+                            Converter.ConvertIntToHex(result);
                     }
                 }
                 else {
@@ -81,8 +84,8 @@ namespace CalculatorFinalProject {
             }
         }
         public void ClearState() {
-            CurrentNumber = "";
             TextBox.Text = "";
+            CurrentNumber = "";
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
         }
