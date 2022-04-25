@@ -77,6 +77,7 @@ namespace CalculatorFinalProject {
                 else {
                     TextBox.Text += value;
                 }
+                ScrollToEnd();
             }
         }
         public void ClearState() {
@@ -84,6 +85,10 @@ namespace CalculatorFinalProject {
             TextBox.Text = "";
             LastOperation = new List<string>() { "" };
             LastValidOperation = new List<string>() { "" };
+        }
+        private void ScrollToEnd() {
+            TextBox.SelectionStart = Text.Length;
+            TextBox.ScrollToCaret();
         }
         public void SetLastValidOp() {
            LastValidOperation.Clear();

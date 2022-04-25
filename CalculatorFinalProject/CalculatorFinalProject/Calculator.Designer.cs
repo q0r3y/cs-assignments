@@ -71,7 +71,6 @@
             // 
             // pnlButtons
             // 
-            this.pnlButtons.Controls.Add(this.btnUndo);
             this.pnlButtons.Controls.Add(this.btnClear);
             this.pnlButtons.Controls.Add(this.btnBack);
             this.pnlButtons.Controls.Add(this.btnEquals);
@@ -80,6 +79,7 @@
             this.pnlButtons.Controls.Add(this.btnSubtract);
             this.pnlButtons.Controls.Add(this.btnMultiply);
             this.pnlButtons.Controls.Add(this.pnlNumbers);
+            this.pnlButtons.Controls.Add(this.btnUndo);
             this.pnlButtons.Location = new System.Drawing.Point(12, 142);
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(228, 230);
@@ -117,6 +117,7 @@
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnEquals
             // 

@@ -13,7 +13,5 @@ namespace CalculatorFinalProject {
         public static string ConvertIntToHex(int value) {
             return Convert.ToString(value, 16);
         }
-
-
     }
 }

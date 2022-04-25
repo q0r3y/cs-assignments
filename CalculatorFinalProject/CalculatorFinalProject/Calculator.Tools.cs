@@ -12,6 +12,8 @@ namespace CalculatorFinalProject {
 
         private void HandleKeyPress(KeyPressEventArgs e) {
             e.Handled = true;
+            if (e.KeyChar == (char)Keys.Back)
+                HandleBackButton();
             if (isValidKey(e))
                 HandleInput(e.KeyChar.ToString());
         }
@@ -46,6 +48,19 @@ namespace CalculatorFinalProject {
                 DisableErrorState();
             InputBox.ClearState();
             OutputBox.ClearState();
+        }
+
+        void HandleBackButton() {
+            if (InputBox.Text.Length <= 1 || OutputBox.Text.Length <= 1) {
+                InputBox.ClearState();
+                OutputBox.ClearState();
+            } else {
+                InputBox.Backspace();
+                OutputBox.ClearState();
+                foreach (char c in InputBox.Text) {
+                    OutputBox.HandleKey(c.ToString());
+                }
+            }
         }
 
         private void EnableErrorState() {

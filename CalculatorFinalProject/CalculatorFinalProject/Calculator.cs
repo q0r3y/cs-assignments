@@ -40,5 +40,6 @@ namespace CalculatorFinalProject {
         private void btnClear_Click(object sender, EventArgs e) => ClearState();
         private void btnUndo_Click(object sender, EventArgs e) => DisableErrorState();
         private void btnEquals_Click(object sender, EventArgs e) => HandleCalculation();
+        private void btnBack_Click(object sender, EventArgs e) => HandleBackButton();
     }
 }
