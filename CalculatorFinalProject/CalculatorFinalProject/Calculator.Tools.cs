@@ -19,6 +19,8 @@ namespace CalculatorFinalProject {
         private void HandleCalculation() {
             try {
                 string equation = InputBox.Text;
+                if (equation.Contains("/0"))
+                    throw new InvalidOperationException("Cannot divide by zero");
                 string result = 
                     new DataTable().Compute(equation, null).ToString();
                 InputBox.HandleValue(result);
