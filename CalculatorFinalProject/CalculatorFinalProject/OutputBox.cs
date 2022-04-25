@@ -100,10 +100,11 @@ namespace CalculatorFinalProject {
         }
         public void RevertState() {
             Text = "";
-            LastOperation.Clear();
+            LastOperation = new List<string>() { "" };
             foreach (string s in LastValidOperation) {
-                Text += s;
-                LastOperation.Add(s);
+                foreach (char c in s) {
+                    HandleKey(c.ToString());
+                }
             }
         }
     }

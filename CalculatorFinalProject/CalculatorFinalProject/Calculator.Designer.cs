@@ -365,6 +365,7 @@
             this.AcceptButton = this.btnEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClear;
             this.ClientSize = new System.Drawing.Size(252, 379);
             this.Controls.Add(this.txtOutputBox);
             this.Controls.Add(this.grpOutputBox);

@@ -64,6 +64,7 @@ namespace CalculatorFinalProject {
             InputBox.TextBox.Enabled = false;
             btnBack.Visible = false;
             btnUndo.Visible = true;
+            btnUndo.Focus();
             DeactivateButtons();
         }
         private void DeactivateButtons() {

@@ -48,4 +48,3 @@ C:\Users\hahnc\source\repos\CIS106\CalculatorFinalProject\CalculatorFinalProject
 C:\Users\hahnc\source\repos\CIS106\CalculatorFinalProject\CalculatorFinalProject\obj\Debug\net6.0-windows\ref\CalculatorFinalProject.dll
 C:\Users\hahnc\source\repos\CIS106\CalculatorFinalProject\CalculatorFinalProject\obj\Debug\net6.0-windows\CalculatorFinalProject.pdb
 C:\Users\hahnc\source\repos\CIS106\CalculatorFinalProject\CalculatorFinalProject\obj\Debug\net6.0-windows\CalculatorFinalProject.genruntimeconfig.cache
-C:\Users\hahnc\source\repos\CIS106\CalculatorFinalProject\CalculatorFinalProject\obj\Debug\net6.0-windows\CalculatorFinalProject.csproj.AssemblyReference.cache
