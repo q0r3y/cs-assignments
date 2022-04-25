@@ -42,6 +42,9 @@ namespace CalculatorFinalProject {
         }
 
         public void HandleValue(string value) {
+            if (value.Length > 10) {
+                value = value.Substring(0, 10);
+            }
             if (int.TryParse(value, out int result)) {
                 if (Mode == "decimal") {
                     TextBox.Text = result.ToString();
@@ -54,7 +57,7 @@ namespace CalculatorFinalProject {
                 }
             }
             else {
-                TextBox.Text += value;
+                TextBox.Text = value;
             }
         }
         private void DisplayOpArray() {

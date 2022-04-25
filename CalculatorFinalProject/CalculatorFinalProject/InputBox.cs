@@ -11,7 +11,7 @@ namespace CalculatorFinalProject {
         public TextBox TextBox { get; set; }
         public List<char> ValidKeys = new List<char> {
             '1','2','3','4','5','6','7','8','9','0',
-            '/','*','+','-','.','(',')'
+            '/','*','+','-','.'
         };
         public InputBox(ref TextBox TextBox) {
             this.TextBox = TextBox;
@@ -37,6 +37,9 @@ namespace CalculatorFinalProject {
             Focus();
         }
         public void HandleValue(string value) {
+            if (value.Length > 10) {
+                value = value.Substring(0, 10);
+            }
             Text = value;
             LastValue = value;
             Focus();

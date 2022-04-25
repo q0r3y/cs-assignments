@@ -1,20 +1,13 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace CalculatorFinalProject {
     public partial class Calculator {
 
         private void HandleInput(string key) {
-/*            if (InputBox.Text.Length < 9) {
-
-            }*/
-// 99999*9999 - Max size
-            InputBox.HandleKey(key);
-            OutputBox.HandleKey(key);
+            if (InputBox.Text.Length < 10) {
+                InputBox.HandleKey(key);
+                OutputBox.HandleKey(key);
+            }
         }
 
         private void HandleKeyPress(KeyPressEventArgs e) {
@@ -100,16 +93,37 @@ namespace CalculatorFinalProject {
         }
         private void SetOutputModeDec() {
             OutputBox.Mode = "decimal";
+            btnDivide.Enabled = true;
+            btnDecimal.Enabled = true;
+            btnSubtract.Enabled = true;
+            InputBox.ValidKeys = new List<char> {
+                '1','2','3','4','5','6','7','8','9','0',
+                '/','*','+','-','.'
+            };
             InputBox.ClearState();
             OutputBox.ClearState();
         }
         private void SetOutputModeBin() {
             OutputBox.Mode = "binary";
+            btnDivide.Enabled = false;
+            btnDecimal.Enabled = false;
+            btnSubtract.Enabled = false;
+            InputBox.ValidKeys = new List<char> {
+                '1','2','3','4','5','6','7','8','9','0',
+                '*','+'
+            };
             InputBox.ClearState();
             OutputBox.ClearState();
         }
         private void SetOutputModeHex() {
             OutputBox.Mode = "hexidecimal";
+            btnDivide.Enabled = false;
+            btnDecimal.Enabled = false;
+            btnSubtract.Enabled = false;
+            InputBox.ValidKeys = new List<char> {
+                '1','2','3','4','5','6','7','8','9','0',
+                '*','+'
+            };
             InputBox.ClearState();
             OutputBox.ClearState();
         }

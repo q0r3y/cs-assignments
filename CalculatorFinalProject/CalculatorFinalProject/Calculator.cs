@@ -10,7 +10,6 @@ namespace CalculatorFinalProject {
             InputBox = new InputBox(ref txtInputBox);
             OutputBox = new OutputBox(ref txtOutputBox);
         }
-
         private void Calculator_Load(object sender, EventArgs e) 
             => rdoOutputDec.Checked = true;
         private void txtEntryBox_KeyPress(object sender, KeyPressEventArgs e)

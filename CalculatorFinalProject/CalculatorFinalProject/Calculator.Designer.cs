@@ -33,9 +33,6 @@
             this.btnUndo = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnSqrt = new System.Windows.Forms.Button();
-            this.btnPosNeg = new System.Windows.Forms.Button();
-            this.btnRecip = new System.Windows.Forms.Button();
             this.btnEquals = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
@@ -77,9 +74,6 @@
             this.pnlButtons.Controls.Add(this.btnUndo);
             this.pnlButtons.Controls.Add(this.btnClear);
             this.pnlButtons.Controls.Add(this.btnBack);
-            this.pnlButtons.Controls.Add(this.btnSqrt);
-            this.pnlButtons.Controls.Add(this.btnPosNeg);
-            this.pnlButtons.Controls.Add(this.btnRecip);
             this.pnlButtons.Controls.Add(this.btnEquals);
             this.pnlButtons.Controls.Add(this.btnAdd);
             this.pnlButtons.Controls.Add(this.btnDivide);
@@ -124,42 +118,12 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // btnSqrt
-            // 
-            this.btnSqrt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSqrt.Location = new System.Drawing.Point(188, 49);
-            this.btnSqrt.Name = "btnSqrt";
-            this.btnSqrt.Size = new System.Drawing.Size(40, 40);
-            this.btnSqrt.TabIndex = 21;
-            this.btnSqrt.Text = "sqrt";
-            this.btnSqrt.UseVisualStyleBackColor = true;
-            // 
-            // btnPosNeg
-            // 
-            this.btnPosNeg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPosNeg.Location = new System.Drawing.Point(47, 187);
-            this.btnPosNeg.Name = "btnPosNeg";
-            this.btnPosNeg.Size = new System.Drawing.Size(40, 40);
-            this.btnPosNeg.TabIndex = 10;
-            this.btnPosNeg.Text = "+/-";
-            this.btnPosNeg.UseVisualStyleBackColor = true;
-            // 
-            // btnRecip
-            // 
-            this.btnRecip.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRecip.Location = new System.Drawing.Point(188, 95);
-            this.btnRecip.Name = "btnRecip";
-            this.btnRecip.Size = new System.Drawing.Size(40, 40);
-            this.btnRecip.TabIndex = 20;
-            this.btnRecip.Text = "1/X";
-            this.btnRecip.UseVisualStyleBackColor = true;
-            // 
             // btnEquals
             // 
             this.btnEquals.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEquals.Location = new System.Drawing.Point(188, 141);
+            this.btnEquals.Location = new System.Drawing.Point(188, 49);
             this.btnEquals.Name = "btnEquals";
-            this.btnEquals.Size = new System.Drawing.Size(40, 86);
+            this.btnEquals.Size = new System.Drawing.Size(40, 178);
             this.btnEquals.TabIndex = 19;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
@@ -243,7 +207,7 @@
             this.btn0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn0.Location = new System.Drawing.Point(0, 138);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(40, 40);
+            this.btn0.Size = new System.Drawing.Size(87, 40);
             this.btn0.TabIndex = 7;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
@@ -365,7 +329,7 @@
             this.rdoOutputHex.AutoSize = true;
             this.rdoOutputHex.Location = new System.Drawing.Point(176, 14);
             this.rdoOutputHex.Name = "rdoOutputHex";
-            this.rdoOutputHex.Size = new System.Drawing.Size(45, 19);
+            this.rdoOutputHex.Size = new System.Drawing.Size(46, 19);
             this.rdoOutputHex.TabIndex = 2;
             this.rdoOutputHex.TabStop = true;
             this.rdoOutputHex.Text = "Hex";
@@ -444,7 +408,6 @@
         private Button btn3;
         private Button btn6;
         private Button btn9;
-        private Button btnPosNeg;
         private Button btn2;
         private Button btn5;
         private Button btn8;
@@ -452,8 +415,6 @@
         private Button btn7;
         private Button btn1;
         private Button btn4;
-        private Button btnSqrt;
-        private Button btnRecip;
         private Button btnEquals;
         private Button btnClear;
         private Button btnBack;
